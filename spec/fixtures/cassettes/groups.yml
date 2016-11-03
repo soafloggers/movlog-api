@@ -1,0 +1,180 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?plot=short&r=json&t=hobbit&y=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.omdbapi.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 03 Nov 2016 07:10:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '939'
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=daa82611d2ecc2cdea8950ba78f04e4371478157007; expires=Fri, 03-Nov-17
+        07:10:07 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 04 Nov 2016 07:10:07 GMT
+      Last-Modified:
+      - Wed, 02 Nov 2016 14:43:05 GMT
+      Vary:
+      - "*"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 2fbe0133c1914632-TPE
+    body:
+      encoding: UTF-8
+      string: '{"Title":"The Hobbit: An Unexpected Journey","Year":"2012","Rated":"PG-13","Released":"14
+        Dec 2012","Runtime":"169 min","Genre":"Adventure, Fantasy","Director":"Peter
+        Jackson","Writer":"Fran Walsh (screenplay), Philippa Boyens (screenplay),
+        Peter Jackson (screenplay), Guillermo del Toro (screenplay), J.R.R. Tolkien
+        (novel)","Actors":"Ian McKellen, Martin Freeman, Richard Armitage, Ken Stott","Plot":"A
+        reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited
+        group of dwarves to reclaim their mountain home - and the gold within it -
+        from the dragon Smaug.","Language":"English","Country":"USA, New Zealand","Awards":"Nominated
+        for 3 Oscars. Another 10 wins & 70 nominations.","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTcwNTE4MTUxMl5BMl5BanBnXkFtZTcwMDIyODM4OA@@._V1_SX300.jpg","Metascore":"58","imdbRating":"7.9","imdbVotes":"643,876","imdbID":"tt0903624","Type":"movie","Response":"True"}'
+    http_version: 
+  recorded_at: Thu, 03 Nov 2016 07:09:57 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?plot=short&r=json&t=Movie%2BNot%2BFound&y=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.omdbapi.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 03 Nov 2016 07:10:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '47'
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=d9810c2925fc2c9aa9a762e4aee855ca81478157008; expires=Fri, 03-Nov-17
+        07:10:08 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 04 Nov 2016 07:10:08 GMT
+      Last-Modified:
+      - Thu, 03 Nov 2016 07:10:07 GMT
+      Vary:
+      - "*"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 2fbe013442e64560-TPE
+    body:
+      encoding: UTF-8
+      string: '{"Response":"False","Error":"Movie not found!"}'
+    http_version: 
+  recorded_at: Thu, 03 Nov 2016 07:09:58 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?plot=short&r=json&t=Star%2BWars&y=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.omdbapi.com
+      User-Agent:
+      - http.rb/2.0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 03 Nov 2016 07:13:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '876'
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=d1f694fe59e05425fe4634569ac6cdcf81478157231; expires=Fri, 03-Nov-17
+        07:13:51 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 04 Nov 2016 07:13:51 GMT
+      Last-Modified:
+      - Wed, 02 Nov 2016 13:48:03 GMT
+      Vary:
+      - "*"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 2fbe06aaa7df457e-TPE
+    body:
+      encoding: UTF-8
+      string: '{"Title":"Star Wars: Episode IV - A New Hope","Year":"1977","Rated":"PG","Released":"25
+        May 1977","Runtime":"121 min","Genre":"Action, Adventure, Fantasy","Director":"George
+        Lucas","Writer":"George Lucas","Actors":"Mark Hamill, Harrison Ford, Carrie
+        Fisher, Peter Cushing","Plot":"Luke Skywalker joins forces with a Jedi Knight,
+        a cocky pilot, a wookiee and two droids to save the galaxy from the Empire''s
+        world-destroying battle-station, while also attempting to rescue Princess
+        Leia from the evil Darth Vader.","Language":"English","Country":"USA","Awards":"Won
+        6 Oscars. Another 48 wins & 28 nominations.","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BOTIyMDY2NGQtOGJjNi00OTk4LWFhMDgtYmE3M2NiYzM0YTVmXkEyXkFqcGdeQXVyNTU1NTcwOTk@._V1_SX300.jpg","Metascore":"92","imdbRating":"8.7","imdbVotes":"921,980","imdbID":"tt0076759","Type":"movie","Response":"True"}'
+    http_version: 
+  recorded_at: Thu, 03 Nov 2016 07:13:41 GMT
+recorded_with: VCR 3.0.3
