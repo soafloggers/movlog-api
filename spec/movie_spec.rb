@@ -28,5 +28,13 @@ describe 'Movie Routes' do
       movie_data = JSON.parse(last_response.body)
       movie_data['response'].must_equal 'False'
     end
+
+    it 'Location: should report if locations of a movie is not found' do
+      get "api/v0.1/#{HAPPY_MOVIE}/location"
+
+      last_response.status.must_equal 200
+      location_data = JSON.parse(last_response.body)
+      location_data['location'].length.must_be :>, 0
+    end
   end
 end

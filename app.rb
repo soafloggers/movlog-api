@@ -28,4 +28,15 @@ class MovlogAPI < Sinatra::Base
       halt 404, "Movie (keyword: #{keyword}) not found"
     end
   end
+
+  get "/#{API_VER}/:keyword/location/?" do
+    keyword = params[:keyword]
+    begin
+      movie = Movlog::Movie.find(t: keyword)
+      content_type 'application/json'
+      { location: movie.get_location }.to_json
+    rescue
+      halt 404, "Movie (keyword: #{keyword}) Locations not found"
+    end
+  end
 end
