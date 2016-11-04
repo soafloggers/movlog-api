@@ -22,7 +22,6 @@ class MovlogAPI < Sinatra::Base
     keyword = params[:keyword]
     begin
       movie = Movlog::Movie.find(t: keyword)
-
       content_type 'application/json'
       { title: movie.title, actors: movie.actors, plot: movie.plot, response: movie.response }.to_json
     rescue

@@ -25,7 +25,7 @@ GEM
     minitest (5.9.1)
     minitest-rg (5.2.0)
       minitest (~> 5.0)
-    movlog (0.2.11)
+    movlog (0.2.12)
       http (~> 2.0)
       nokogiri (~> 1.6, >= 1.6.8.1)
     nokogiri (1.6.8.1)
@@ -68,7 +68,7 @@ DEPENDENCIES
   json
   minitest
   minitest-rg
-  movlog (~> 0.2.11)
+  movlog (~> 0.2.12)
   pry-byebug
   puma
   rack-test

@@ -6,7 +6,7 @@ gem 'puma'
 gem 'json'
 gem 'econfig'
 
-gem 'movlog', '~> 0.2.11'
+gem 'movlog', '~> 0.2.12'
 
 group :develop, :test do
   gem 'pry-byebug'
