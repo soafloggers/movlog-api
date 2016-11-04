@@ -23,9 +23,9 @@ describe 'Movie Routes' do
     it 'SAD: should report if a movie is not found' do
       get "api/v0.1/#{SAD_MOVIE}/movie"
 
-      last_response.content_type.must_equal 'application/json'
-      movie_data = JSON.parse(last_response.body)
-      movie_data['response'].must_equal 'False'
+      last_response.status.must_equal 404
+      last_response.body.must_include SAD_MOVIE
+      last_response.body.must_include 'not found'
     end
   end
 end
