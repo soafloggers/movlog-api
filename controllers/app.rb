@@ -1,17 +1,7 @@
 # frozen_string_literal: true
-require 'sinatra'
-require 'econfig'
-require 'movlog'
 
 # MovlogAPI web service
 class MovlogAPI < Sinatra::Base
-  extend Econfig::Shortcut
-
-  Econfig.env = settings.environment.to_s
-  Econfig.root = settings.root
-  Skyscanner::SkyscannerApi.config.update(api_key: config.SKY_API_KEY)
-  Airbnb::AirbnbApi.config.update(client_id: config.AIRBNB_CLIENT_ID)
-
   API_VER = 'api/v0.1'
 
   get '/?' do

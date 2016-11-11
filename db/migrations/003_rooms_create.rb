@@ -8,9 +8,9 @@ Sequel.migration do
       String :name
       String :city
       String :picture_url
-      Int :person_capacity
-      Int :star_rating
-      Int :nightly_price
+      # Int :person_capacity
+      # Int :star_rating
+      # Int :nightly_price
     end
   end
 end
