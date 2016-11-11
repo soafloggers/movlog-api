@@ -7,7 +7,7 @@ require 'rack/test'
 require 'vcr'
 require 'webmock'
 
-require_relative '../app'
+require './init.rb'
 
 include Rack::Test::Methods
 
@@ -31,6 +31,6 @@ end
 HAPPY_MOVIE_URL = 'http://www.omdbapi.com?t=star+wars&y=&plot=short&r=json'
 SAD_MOVIE_URL = 'http://www.omdbapi.com?t=sadmovie&y=&plot=short&r=json'
 
-SAD_MOIVE = 'sadmovie'
+SAD_MOVIE = 'sadmovie'
 SAD_LOCATION_ID = '0000'
 REMOVED_LOCATION_ID = '0000'
