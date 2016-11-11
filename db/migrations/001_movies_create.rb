@@ -3,7 +3,7 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_movie(:movie) do
+    create_table(:movies) do
       primary_key :imdb_id
       String :title
       String :actors

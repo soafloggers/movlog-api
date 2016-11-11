@@ -3,7 +3,7 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_room(:room) do
+    create_table(:rooms) do
       primary_key :id
       String :name
       String :city
