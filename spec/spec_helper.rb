@@ -7,7 +7,7 @@ require 'rack/test'
 require 'vcr'
 require 'webmock'
 
-require_relative '../app'
+require './init.rb'
 
 include Rack::Test::Methods
 
@@ -17,7 +17,8 @@ end
 
 FIXTURES_FOLDER = 'spec/fixtures'
 CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes"
-GROUPS_CASSETTE = 'groups'
+MOVIES_CASSETTE = 'movies'
+LOCATIONS_CASSETTE = 'locations'
 
 VCR.configure do |c|
   c.cassette_library_dir = CASSETTES_FOLDER
@@ -27,5 +28,9 @@ VCR.configure do |c|
   c.filter_sensitive_data('<AIRBNB_CLIENT_ID>') { ENV['AIRBNB_CLIENT_ID'] }
 end
 
-HAPPY_MOVIE = 'Star+Wars'
-SAD_MOVIE = 'Movie+Not+Found'
+HAPPY_MOVIE_URL = 'http://www.omdbapi.com?t=star+wars&y=&plot=short&r=json'
+SAD_MOVIE_URL = 'http://www.omdbapi.com?t=sadmovie&y=&plot=short&r=json'
+
+SAD_MOVIE = 'sadmovie'
+SAD_LOCATION_ID = '0000'
+REMOVED_LOCATION_ID = '0000'
