@@ -3,7 +3,7 @@
 # MovlogAPI web service
 class MovlogAPI < Sinatra::Base
   get "/#{API_VER}/:keyword/location/?" do
-    keyword = params[:keyword]
+    keyword = params[:keyword].gsub(/\+/, ' ')
     begin
       movie = Movie.find(title: keyword)
       halt 400, "Movie (keyword: #{keyword}) not found" unless movie

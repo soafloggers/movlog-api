@@ -28,7 +28,7 @@ VCR.configure do |c|
   c.filter_sensitive_data('<AIRBNB_CLIENT_ID>') { ENV['AIRBNB_CLIENT_ID'] }
 end
 
-HAPPY_MOVIE_URL = 'http://www.omdbapi.com?t=star+wars&y=&plot=short&r=json'
+HAPPY_MOVIE_URL = 'http://www.omdbapi.com?t=Star+Wars:+Episode+IV+-+A+New+Hope&y=&plot=short&r=json'
 SAD_MOVIE_URL = 'http://www.omdbapi.com?t=sadmovie&y=&plot=short&r=json'
 
 SAD_MOVIE = 'sadmovie'

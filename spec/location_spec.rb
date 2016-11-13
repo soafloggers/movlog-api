@@ -6,11 +6,11 @@ describe 'Location Routes' do
     VCR.insert_cassette LOCATIONS_CASSETTE, record: :new_episodes
 
     # TODO: find a better way to populate !
-    # DB[:movies].delete
-    # DB[:locations].delete
-    # post 'api/v0.1/movie',
-    #      { url: HAPPY_MOVIE_URL }.to_json,
-    #      'CONTENT_TYPE' => 'application/json'
+    DB[:movies].delete
+    DB[:locations].delete
+    post 'api/v0.1/movie',
+         { url: HAPPY_MOVIE_URL }.to_json,
+         'CONTENT_TYPE' => 'application/json'
   end
 
   after do
@@ -19,7 +19,8 @@ describe 'Location Routes' do
 
   describe 'Get the filming locations from a movie' do
     it 'HAPPY: should find the filming locations from a movie' do
-      get "api/v0.1/#{Movie.first.title}/location"
+      title = Movie.first.title.gsub(/ /, '+')
+      get "api/v0.1/#{title}/location"
 
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'

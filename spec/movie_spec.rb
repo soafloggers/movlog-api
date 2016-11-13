@@ -13,15 +13,16 @@ describe 'Movie Routes' do
   describe 'Find movie by keyword' do
     before do
       # TODO: find a better way
-      # DB[:movies].delete
-      # DB[:locations].delete
-      # post 'api/v0.1/movie',
-      #      { url: HAPPY_MOVIE_URL }.to_json,
-      #      'CONTENT_TYPE' => 'application/json'
+      DB[:movies].delete
+      DB[:locations].delete
+      post 'api/v0.1/movie',
+           { url: HAPPY_MOVIE_URL }.to_json,
+           'CONTENT_TYPE' => 'application/json'
     end
 
     it 'HAPPY: should find a movie given a correct keyword' do
-      get "api/v0.1/#{Movie.first.title}/movie"
+      title = Movie.first.title.gsub(/ /, '+')
+      get "api/v0.1/#{title}/movie"
 
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'
@@ -37,43 +38,43 @@ describe 'Movie Routes' do
     end
   end
 
-  # describe 'Loading and saving a new movie by movie name' do
-  #   before do
-  #     DB[:movies].delete
-  #     DB[:locations].delete
-  #   end
-  #
-  #   it '(HAPPY) should load and save a new movie by its OMDB URL' do
-  #     post 'api/v0.1/movie',
-  #          { url: HAPPY_MOVIE_URL }.to_json,
-  #          'CONTENT_TYPE' => 'application/json'
-  #
-  #     last_response.status.must_equal 200
-  #     last_response.content_type.must_equal 'application/json'
-  #     movie_data = JSON.parse(last_response.body)
-  #     movie_data['title'].length.must_be :>=, 0
-  #
-  #     Movie.count.must_equal 1
-  #     Location.count.must_be :>=, 1
-  #   end
-  #
-  #   it '(BAD) should report error if given invalid URL' do
-  #     post 'api/v0.1/movie',
-  #          { url: SAD_MOVIE_URL }.to_json,
-  #          'CONTENT_TYPE' => 'application/json'
-  #
-  #     last_response.status.must_equal 404
-  #     last_response.body.must_include SAD_MOVIE_URL
-  #   end
-  #
-  #   it 'should report error if movie already exists' do
-  #     2.times do
-  #       post 'api/v0.1/movie',
-  #            { url: HAPPY_MOVIE_URL }.to_json,
-  #            'CONTENT_TYPE' => 'application/json'
-  #     end
-  #
-  #     last_response.status.must_equal 422
-  #   end
-  # end
+  describe 'Loading and saving a new movie by movie name' do
+    before do
+      DB[:movies].delete
+      DB[:locations].delete
+    end
+
+    it '(HAPPY) should load and save a new movie by its OMDB URL' do
+      post 'api/v0.1/movie',
+           { url: HAPPY_MOVIE_URL }.to_json,
+           'CONTENT_TYPE' => 'application/json'
+
+      last_response.status.must_equal 200
+      last_response.content_type.must_equal 'application/json'
+      movie_data = JSON.parse(last_response.body)
+      movie_data['title'].length.must_be :>=, 0
+
+      Movie.count.must_equal 1
+      Location.count.must_be :>=, 1
+    end
+
+    it '(BAD) should report error if given invalid URL' do
+      post 'api/v0.1/movie',
+           { url: SAD_MOVIE_URL }.to_json,
+           'CONTENT_TYPE' => 'application/json'
+
+      last_response.status.must_equal 400
+      last_response.body.must_include SAD_MOVIE_URL
+    end
+
+    it 'should report error if movie already exists' do
+      2.times do
+        post 'api/v0.1/movie',
+             { url: HAPPY_MOVIE_URL }.to_json,
+             'CONTENT_TYPE' => 'application/json'
+      end
+
+      last_response.status.must_equal 422
+    end
+  end
 end
