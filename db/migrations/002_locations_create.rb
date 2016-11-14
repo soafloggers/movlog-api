@@ -6,6 +6,7 @@ Sequel.migration do
     create_table(:locations) do
       primary_key :id
       foreign_key :movie_id
+
       String :name
       String :airport
     end

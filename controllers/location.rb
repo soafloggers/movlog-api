@@ -26,4 +26,22 @@ class MovlogAPI < Sinatra::Base
       halt 404, "Cannot find movie (keyword: #{keyword}) locations"
     end
   end
+
+  put "/#{API_VER}/location/:id/:airport" do
+    begin
+      location_id = params[:id]
+      airport = params[:airport]
+      location = Location.find(id: location_id)
+      halt 400, "Location (id: #{location_id}) is not stored" unless location
+
+      location.update(airport: airport)
+      location.save
+
+      content_type 'text/plain'
+      body ''
+    rescue
+      content_type 'text/plain'
+      halt 500, "Cannot update location (id: #{location_id})"
+    end
+  end
 end
