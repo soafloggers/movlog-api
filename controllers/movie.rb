@@ -6,14 +6,15 @@ class MovlogAPI < Sinatra::Base
     keyword = params[:keyword].gsub(/\+/, ' ')
     begin
       movie = Movie.find(title: keyword)
-
-      content_type 'application/json'
-      {
-        imdb_id: movie.imdb_id,
-        title: movie.title,
-        actors: movie.actors,
-        plot: movie.plot
-      }.to_json
+      
+      MovieRepresenter.new(result.value).to_json
+      # content_type 'application/json'
+      # {
+      #   imdb_id: movie.imdb_id,
+      #   title: movie.title,
+      #   actors: movie.actors,
+      #   plot: movie.plot
+      # }.to_json
     rescue
       content_type 'text/plain'
       halt 404, "Movie (keyword: #{keyword}) not found"
