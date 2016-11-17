@@ -6,6 +6,7 @@ gem 'sinatra'
 gem 'puma'
 gem 'json'
 gem 'econfig'
+gem 'rake'
 
 gem 'movlog', '0.2.12'
 gem 'sequel'
@@ -26,7 +27,6 @@ group :test do
   gem 'minitest-rg'
 
   gem 'rack-test'
-  gem 'rake'
 
   gem 'vcr'
   gem 'webmock'
