@@ -28,4 +28,22 @@ describe 'Movie Routes' do
       movie_data['response'].must_equal 'False'
     end
   end
+
+  describe 'Get the filming locations from a movie' do
+    it 'HAPPY: should find the filming locations from a movie' do
+      get "api/v0.1/#{HAPPY_MOVIE}/location"
+
+      last_response.status.must_equal 200
+      last_response.content_type.must_equal 'application/json'
+      location_data = JSON.parse(last_response.body)
+      location_data['location'].wont_be_nil
+    end
+
+    it 'SAD: should report if the locations cannot be found' do
+      get "api/v0.1/#{SAD_MOVIE}/location"
+
+      last_response.status.must_equal 404
+      last_response.body.must_include SAD_MOVIE
+    end
+  end
 end
