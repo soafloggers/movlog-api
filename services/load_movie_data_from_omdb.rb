@@ -56,7 +56,7 @@ class LoadMovieFromOmdb
     locations.each do |location|
       write_movie_location(movie, location)
     end
-    Right(group)
+    Right(movie)
   }
 
   def self.call(params)
