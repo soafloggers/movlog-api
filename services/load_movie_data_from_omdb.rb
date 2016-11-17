@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# Loads data from Facebook group to database
+# Loads data from Movie data to database
 class LoadMovieFromOmdb
   extend Dry::Monads::Either::Mixin
   extend Dry::Container::Mixin
