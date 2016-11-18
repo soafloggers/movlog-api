@@ -33,8 +33,8 @@ class LoadMovieFromOmdb
 
   register :parse_movie_title, lambda { |omdb_movie_data|
     begin
-      ombd_movie = JSON.parse(omdb_movie_data)
-      movie_title = ombd_movie['Title'].gsub(/ /, '+')
+      movie_title = JSON.parse(omdb_movie_data)['Title']
+      movie_title.length
       Right(movie_title)
     rescue
       Left(Error.new(:cannot_process, 'Movie data cannot parse title'))
@@ -45,7 +45,7 @@ class LoadMovieFromOmdb
     if Movie.find(title: movie_title)
       Left(Error.new(:cannot_process, 'Movie already exists'))
     else
-      Right(Movlog::Movie.find(t: movie_title))
+      Right(Movlog::Movie.find(t: movie_title.gsub(/ /, '+')))
     end
   }
 

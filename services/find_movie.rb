@@ -5,8 +5,9 @@ class FindMovie
   extend Dry::Monads::Either::Mixin
 
   def self.call(params)
-    if (movie = Movie.find(title: params[:keyword])).nil?
-      Left(Error.new(:not_found, 'Movie not found'))
+    keyword = params[:keyword].gsub(/\+/, ' ')
+    if (movie = Movie.find(title: keyword)).nil?
+      Left(Error.new(:not_found, "Movie #{params[:keyword]} could not be found"))
     else
       Right(movie)
     end

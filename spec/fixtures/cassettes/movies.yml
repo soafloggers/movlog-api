@@ -3084,4 +3084,205 @@ http_interactions:
         ZHk+CjwvaHRtbD4K
     http_version: 
   recorded_at: Fri, 18 Nov 2016 06:12:06 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?plot=short&r=json&t=Star%20Wars:%20Episode%20IV%20-%20A%20New%20Hope&y=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.omdbapi.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 18 Nov 2016 12:24:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '876'
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=dec50a73327b928c5695f47aa574a3fc71479471850; expires=Sat, 18-Nov-17
+        12:24:10 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Sat, 19 Nov 2016 12:24:10 GMT
+      Last-Modified:
+      - Fri, 18 Nov 2016 06:12:02 GMT
+      Vary:
+      - "*"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 303b65dc275d45c0-TPE
+    body:
+      encoding: UTF-8
+      string: '{"Title":"Star Wars: Episode IV - A New Hope","Year":"1977","Rated":"PG","Released":"25
+        May 1977","Runtime":"121 min","Genre":"Action, Adventure, Fantasy","Director":"George
+        Lucas","Writer":"George Lucas","Actors":"Mark Hamill, Harrison Ford, Carrie
+        Fisher, Peter Cushing","Plot":"Luke Skywalker joins forces with a Jedi Knight,
+        a cocky pilot, a wookiee and two droids to save the galaxy from the Empire''s
+        world-destroying battle-station, while also attempting to rescue Princess
+        Leia from the evil Darth Vader.","Language":"English","Country":"USA","Awards":"Won
+        6 Oscars. Another 48 wins & 28 nominations.","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BZGEzZTExMDEtNjg4OC00NjQxLTk5NTUtNjRkNjA3MmYwZjg1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg","Metascore":"92","imdbRating":"8.7","imdbVotes":"927,743","imdbID":"tt0076759","Type":"movie","Response":"True"}'
+    http_version: 
+  recorded_at: Fri, 18 Nov 2016 12:24:10 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?plot=short&r=json&t=&y=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.omdbapi.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 18 Nov 2016 12:24:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '52'
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=df99e7103d917a277f16361d9e97780301479471878; expires=Sat, 18-Nov-17
+        12:24:38 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Sat, 19 Nov 2016 12:24:38 GMT
+      Last-Modified:
+      - Fri, 18 Nov 2016 12:24:37 GMT
+      Vary:
+      - "*"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 303b6687d447466e-TPE
+    body:
+      encoding: UTF-8
+      string: '{"Response":"False","Error":"Something went wrong."}'
+    http_version: 
+  recorded_at: Fri, 18 Nov 2016 12:24:38 GMT
+- request:
+    method: get
+    uri: http://www.imdb.com/title//locations?ref_=tt_dt_dt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Date:
+      - Fri, 18 Nov 2016 12:24:39 GMT
+      Server:
+      - HTTPDaemon
+      Cache-Control:
+      - private
+      Content-Type:
+      - text/html; charset=iso-8859-1
+      Set-Cookie:
+      - uu=BCYiBxyZMl-IdIiTFnd__OT4KbQJv6VmeMB874iBzf1s8shzvvxykvxlqaLi33ytw2OJS4qpjPAQZwCR46ul53_6LjUJlwnYbaG9OXv9elu73Gl-id6wcDMfzlhAwVrrmTWodiaml7CD3MqnEBHTW44STvJw3MKcya5cCxask4bV1dFn2-SUb1ky5S55YpLIPMqYgsAnNNKlg3q_kClt9umU9KpVbEt1UTXrwCq5uT6OPfVee1813lhjKxHttz-GVKxD;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      - uu=BCYqBRk9LF01OIQ3QLdUXVENmLMJv6VmeMB874iBzf1s8siakSAHq4cZ-OUgzrfNo1lgb8xoEe52cx2ii_0YkvshL7zN8Zd-Ohn9RUpN8e9jYb2GDkfmFS5vCEpI-E6MNX4iGa77ywapqG8kDQMgBRutgl4fNk_hAfDWUT6NDZIDMoc;expires=Thu,
+        30 Dec 2037 00:00:00 GMT;path=/;domain=.imdb.com
+      Vary:
+      - Accept-Encoding,User-Agent
+      P3p:
+      - policyref="http://i.imdb.com/images/p3p.xml",CP="CAO DSP LAW CUR ADM IVAo
+        IVDo CONo OTPo OUR DELi PUBi OTRi BUS PHY ONL UNI PUR FIN COM NAV INT DEM
+        CNT STA HEA PRE LOC GOV OTC "
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"utf-8\"
+        />\n  <title>404 Error</title>\n</head>\n<body>\n\n<style>\nhtml, body {\n
+        \ height: 100%;\n}\nbody {\n  margin: auto;\n  width: 1008px;\n  background-color:
+        #D4D9DD;\n  font-family: Verdana, Arial, sans-serif;\n}\na {\n  text-decoration:
+        none;\n}\na:hover {\n  text-decoration: underline;\n}\na:link, a:hover, a:visited
+        {\n  color: #136CB2;\n}\na:active {\n  color: #E7BE00;\n}\n#error {\n  height:
+        100%;\n  background-color: white;\n  border-left: 1px solid #999999;\n  border-right:
+        1px solid #999999;\n  box-shadow: 0 0 5px 5px #C5CACD;\n}\n.error_message
+        {\n  color: #999999;\n  font-size: 17.5px;\n  padding: 30px 70px 20px;\n}\n.error_bubble
+        {\n  font-family: Arial, helvetica, sans-serif;\n  font-weight: bold;\n  border-radius:
+        8px;\n  -moz-border-radius: 8px;\n  margin: 0 70px 0 70px;\n  padding: 50px;\n}\n.error_bubble
+        div {\n  display: inline-block;\n  vertical-align: middle;\n}\n.error_quote
+        {\n  color: #FFFFFF;\n  font-size: 30px;\n  line-height: 1.35em;\n  padding-left:
+        50px;\n  width: 500px;\n}\n.error_code {\n  font-size: 100px;\n  line-height:
+        50px;\n  margin-top:8px\n}\n.error_arrow {\n  border-color: #DECA16 transparent
+        transparent transparent;\n  border-style: solid;\n  border-width: 21px 0px
+        0px 32px;\n  height: 0;\n  left: 700px;\n  line-height: 0;\n  position: relative;\n
+        \ top: -1px;\n  width: 0;\n}\n.error_code > span {\n  font-size: 50px;\n}\n.error_attrib
+        {\n  color: #999999;\n  float: right;\n  font-size: 14px;\n  font-style: italic;\n
+        \ padding: 10px 70px 36px;\n}\n.error_code_404 .error_bubble {\n  background:
+        none repeat scroll 0% 0% #DECA16;\n  border: 1px solid #DECA16;\n}\n.error_code_500
+        .error_bubble {\n  background: none repeat scroll 0% 0% #EDCA24;\n  border:
+        1px solid #EDCA24;\n}\n.error_code_404 .error_code {\n  color: #BFAD13;\n}\n.error_code_500
+        .error_code {\n  color: #CCAD1F;\n}\n.error_code_500 .error_arrow {\n  border-color:
+        #EDCA24 transparent transparent transparent;\n}\na.btn {\n  background-repeat:
+        repeat-x; \n  background-color: #ECE2C6;\n  background-image: linear-gradient(rgba(255,255,255,.8)
+        5%, rgba(255,255,255,0.0) 70%, rgba(255,255,255,0.8) 100%); \n  background-image:
+        -moz-linear-gradient(rgba(255,255,255,.8) 5%, rgba(255,255,255,0.0) 70%, rgba(255,255,255,0.8)
+        100%); \n  background-image: -webkit-linear-gradient(rgba(255,255,255,.8)
+        5%, rgba(255,255,255,0.0) 70%, rgba(255,255,255,0.8) 100%); \n  background-image:
+        -ms-linear-gradient(rgba(255,255,255,.8) 5%, rgba(255,255,255,0.0) 70%, rgba(255,255,255,0.8)
+        100%); \n  border-color: #E0E0E0 #C0C0C0 #C0C0C0 #E0E0E0;\n  border-radius:
+        3px 3px 3px 3px;\n  border-style: solid;\n  border-width: 1px;\n  color: #000000;\n
+        \ cursor: pointer;\n  float: right;\n  margin-right: 70px;\n  margin-top:
+        26px;\n  padding: 0.3em 0.6em;\n  text-decoration: none;\n}\na.btn:hover {\n
+        \ background-image: none;\n  border-color: #E6B800;\n}\n.clear {\n  clear:
+        both;\n}\n</style>\n<div id=\"error\" class=\"error_code_404\">\n    <div
+        class=\"error_message\">\n        The requested URL was not found on our server.
+        <a href=\"/\">Go to the IMDb homepage</a> &raquo;\n    </div>\n    <div class=\"error_bubble\">\n
+        \       <div class=\"error_code\">404<br><span>ERROR</span></div>\n        <div
+        class=\"error_quote\">There is no page.</div>\n    </div>\n    <div class=\"error_arrow\"></div>\n
+        \   <div class=\"error_attrib\">        <span>Spoon Boy, </span>        <a
+        href=\"/title/tt0133093/\">The Matrix (1999)</a>\n    </div>\n    <div class=\"clear\"></div>\n</div>\n\n\n\n</body>\n</html>\n"
+    http_version: 
+  recorded_at: Fri, 18 Nov 2016 12:24:39 GMT
 recorded_with: VCR 3.0.3

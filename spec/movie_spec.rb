@@ -23,7 +23,7 @@ describe 'Movie Routes' do
     it 'HAPPY: should find a movie given a correct keyword' do
       title = Movie.first.title.gsub(/ /, '+')
       get "api/v0.1/#{title}/movie"
-
+      # print last_response.body.to_s
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'
       movie_data = JSON.parse(last_response.body)
@@ -63,8 +63,8 @@ describe 'Movie Routes' do
            { url: SAD_MOVIE_URL }.to_json,
            'CONTENT_TYPE' => 'application/json'
 
-      last_response.status.must_equal 400
-      last_response.body.must_include SAD_MOVIE_URL
+      last_response.status.must_equal 422
+      last_response.body.must_include 'Movie data cannot parse title'
     end
 
     it 'should report error if movie already exists' do

@@ -6,6 +6,7 @@ class MovlogAPI < Sinatra::Base
     result = FindMovie.call(params)
 
     if result.success?
+      content_type 'application/json'
       MovieRepresenter.new(result.value).to_json
     else
       ErrorRepresenter.new(result.value).to_status_response
@@ -17,6 +18,7 @@ class MovlogAPI < Sinatra::Base
     result = LoadMovieFromOmdb.call(request.body.read)
 
     if result.success?
+      content_type 'application/json'
       MovieRepresenter.new(result.value).to_json
     else
       ErrorRepresenter.new(result.value).to_status_response
