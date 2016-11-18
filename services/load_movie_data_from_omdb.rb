@@ -36,7 +36,7 @@ class LoadMovieFromOmdb
       ombd_movie = JSON.parse(omdb_movie_data)
       movie_title = ombd_movie['Title'].gsub(/ /, '+')
       Right(movie_title)
-    else
+    rescue
       Left(Error.new(:cannot_process, 'Movie data cannot parse title'))
     end
   }
