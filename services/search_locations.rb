@@ -6,17 +6,27 @@ class SearchLocations
   extend Dry::Container::Mixin
 
   register :validate_params, lambda { |params|
-    movie = Movie.find(title: keyword)
-    if movie
-      Right( movie: movie )
+    keyword = params[:keyword].gsub(/\+/, ' ')
+    movie_id = Movie.find(title: keyword).id
+    
+    if movie_id
+      Right(movie_id)
     else
       Left(Error.new(:not_found, 'Movie not found'))
     end
   }
 
-  register :search_locations, lambda { |input|
-    postings = MovieLocationsQuery.call(input[:movie])
-    Right(results)
+  register :search_locations, lambda { |movie_id|
+    locations = Location.where(movie_id: movie_id).all
+    locations = locations.map do |loc|
+      LocationRepresenter.new(loc).to_json
+    end
+
+    if locations
+      Right(locations)
+    else
+      Left(Error.new(:not_found, 'Location not found'))
+    end
   }
 
   def self.call(params)

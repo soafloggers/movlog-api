@@ -6,7 +6,8 @@ class MovlogAPI < Sinatra::Base
     results = SearchLocations.call(params)
 
     if results.success?
-      LocationsSearchResultsRepresenter.new(results.value).to_json
+      content_type 'application/json'
+      results.value.to_json
     else
       ErrorRepresenter.new(results.value).to_status_response
     end
@@ -16,6 +17,7 @@ class MovlogAPI < Sinatra::Base
     result = UpdateLocationFromImdb.call(params)
 
     if result.success?
+      content_type 'application/json'
       LocationRepresenter.new(result.value).to_json
     else
       ErrorRepresenter.new(result.value).to_status_response
