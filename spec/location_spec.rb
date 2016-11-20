@@ -31,8 +31,8 @@ describe 'Location Routes' do
     it 'SAD: should report if the locations cannot be found' do
       get "api/v0.1/#{SAD_MOVIE}/location"
 
-      last_response.status.must_equal 400
-      last_response.body.must_include SAD_MOVIE
+      last_response.status.must_equal 404
+      last_response.body.must_include 'Movie not found'
     end
   end
 
@@ -45,19 +45,19 @@ describe 'Location Routes' do
            'CONTENT_TYPE' => 'application/json'
     end
 
-    # it '(HAPPY) should successfully update valid location' do
-    #   original = Location.first
-    #   put "api/v0.1/location/#{original.id}/aaa"
-    #   last_response.status.must_equal 200
-    #   updated = Location.first
-    #   updated.airport.must_equal('aaa')
-    # end
-    #
-    # it '(BAD) should report error if given invalid posting ID' do
-    #   put "api/v0.1/location/#{SAD_LOCATION_ID}/bbb"
-    #
-    #   last_response.status.must_equal 400
-    #   last_response.body.must_include SAD_LOCATION_ID
-    # end
+    it '(HAPPY) should successfully update valid location' do
+      original = Location.first
+      put "api/v0.1/location/#{original.id}/aaa"
+      last_response.status.must_equal 200
+      updated = Location.first
+      updated.airport.must_equal('aaa')
+    end
+
+    it '(BAD) should report error if given invalid location ID' do
+      put "api/v0.1/location/#{SAD_LOCATION_ID}/bbb"
+
+      last_response.status.must_equal 400
+      last_response.body.must_include 'Location is not stored'
+    end
   end
 end

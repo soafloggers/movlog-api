@@ -7,10 +7,10 @@ class SearchLocations
 
   register :validate_params, lambda { |params|
     keyword = params[:keyword].gsub(/\+/, ' ')
-    movie_id = Movie.find(title: keyword).id
+    movie = Movie.find(title: keyword)
     
-    if movie_id
-      Right(movie_id)
+    if movie
+      Right(movie.id)
     else
       Left(Error.new(:not_found, 'Movie not found'))
     end
