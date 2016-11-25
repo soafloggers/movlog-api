@@ -3285,4 +3285,354 @@ http_interactions:
         href=\"/title/tt0133093/\">The Matrix (1999)</a>\n    </div>\n    <div class=\"clear\"></div>\n</div>\n\n\n\n</body>\n</html>\n"
     http_version: 
   recorded_at: Fri, 18 Nov 2016 12:24:39 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Ajim&username=z255477
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Nov 2016 10:50:32 GMT
+      Server:
+      - Apache/2.4.6 (Linux/SUSE)
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":103,"geonames":[{"adminCode1":"28","lng":"10.75664","geonameId":2473937,"toponymName":"Ajim","countryId":"2464461","fcl":"P","population":0,"countryCode":"TN","name":"Ajim","fclName":"city,
+        village,...","countryName":"Tunisia","fcodeName":"populated place","adminName1":"Madanīn","lat":"33.72638","fcode":"PPL"}]}'
+    http_version: 
+  recorded_at: Fri, 25 Nov 2016 10:50:33 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Chott%20el%20Djerid&username=z255477
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Nov 2016 10:50:34 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) mod_jk/1.2.41 OpenSSL/1.0.1e-fips
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":157,"geonames":[{"adminCode1":"00","lng":"8.2295","geonameId":2470175,"toponymName":"Chott
+        el Djérid","countryId":"2464461","fcl":"H","population":0,"countryCode":"TN","name":"Chott
+        el Djerid","fclName":"stream, lake, ...","countryName":"Tunisia","fcodeName":"sabkha(s)","adminName1":"","lat":"33.74826","fcode":"SBKH"}]}'
+    http_version: 
+  recorded_at: Fri, 25 Nov 2016 10:50:34 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Bouhlel&username=z255477
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Nov 2016 10:50:34 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) mod_jk/1.2.41 OpenSSL/1.0.1e-fips
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":1966,"geonames":[{"adminCode1":"36","lng":"10.29472","geonameId":2465904,"toponymName":"Sidi
+        Bou Mehl","countryId":"2464461","fcl":"S","population":0,"countryCode":"TN","name":"Sidi
+        Bou Mehl","fclName":"spot, building, farm","countryName":"Tunisia","fcodeName":"tomb(s)","adminName1":"Tūnis","lat":"36.715","fcode":"TMB"}]}'
+    http_version: 
+  recorded_at: Fri, 25 Nov 2016 10:50:35 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Elstree%20Studios&username=z255477
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Nov 2016 10:50:30 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '361'
+      Connection:
+      - close
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":27,"geonames":[{"adminCode1":"IL","lng":"-88.28285","geonameId":4890863,"toponymName":"Elfstrom
+        Stadium","countryId":"6252001","fcl":"S","population":0,"countryCode":"US","name":"Elfstrom
+        Stadium","fclName":"spot, building, farm","countryName":"United States","fcodeName":"stadium","adminName1":"Illinois","lat":"41.88003","fcode":"STDM"}]}'
+    http_version: 
+  recorded_at: Fri, 25 Nov 2016 10:50:35 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Death%20Valley%20National%20Park&username=z255477
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Nov 2016 10:50:30 GMT
+      Server:
+      - Apache/2.2.15 (CentOS)
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '375'
+      Connection:
+      - close
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":20,"geonames":[{"adminCode1":"CA","lng":"-117.13262","geonameId":5342048,"toponymName":"Death
+        Valley National Park","countryId":"6252001","fcl":"L","population":0,"countryCode":"US","name":"Death
+        Valley National Park","fclName":"parks,area, ...","countryName":"United States","fcodeName":"park","adminName1":"California","lat":"36.48393","fcode":"PRK"}]}'
+    http_version: 
+  recorded_at: Fri, 25 Nov 2016 10:50:36 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Tikal%20National%20Park&username=z255477
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Nov 2016 10:50:37 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) mod_jk/1.2.41 OpenSSL/1.0.1e-fips
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":7,"geonames":[{"adminCode1":"12","lng":"-89.62164","geonameId":3588367,"toponymName":"Tikal
+        National Park","countryId":"3595528","fcl":"L","population":0,"countryCode":"GT","name":"Tikal
+        National Park","fclName":"parks,area, ...","countryName":"Guatemala","fcodeName":"park","adminName1":"Petén","lat":"17.22347","fcode":"PRK"}]}'
+    http_version: 
+  recorded_at: Fri, 25 Nov 2016 10:50:37 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Driss%20Hotel&username=z255477
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Nov 2016 10:50:38 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) mod_jk/1.2.41 OpenSSL/1.0.1e-fips
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":37,"geonames":[{"adminCode1":"07","lng":"31.39515","geonameId":10127415,"toponymName":"Side
+        Elis Hotel","countryId":"298795","fcl":"S","population":0,"countryCode":"TR","name":"Side
+        Elis Hotel","fclName":"spot, building, farm","countryName":"Turkey","fcodeName":"hotel","adminName1":"Antalya","lat":"36.7854","fcode":"HTL"}]}'
+    http_version: 
+  recorded_at: Fri, 25 Nov 2016 10:50:38 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Yuma&username=z255477
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Nov 2016 10:50:38 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) mod_jk/1.2.41 OpenSSL/1.0.1e-fips PHP/5.4.16
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":283,"geonames":[{"adminCode1":"AZ","lng":"-114.6244","geonameId":5322053,"toponymName":"Yuma","countryId":"6252001","fcl":"P","population":93064,"countryCode":"US","name":"Yuma","fclName":"city,
+        village,...","countryName":"United States","fcodeName":"seat of a second-order
+        administrative division","adminName1":"Arizona","lat":"32.72532","fcode":"PPLA2"}]}'
+    http_version: 
+  recorded_at: Fri, 25 Nov 2016 10:50:38 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Shepperton%20Studios&username=z255477
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 25 Nov 2016 10:50:39 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) mod_jk/1.2.41 OpenSSL/1.0.1e-fips PHP/5.4.16
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":8,"geonames":[{"adminCode1":"07","lng":"145.39301","geonameId":7668768,"toponymName":"Shepparton
+        Airport","countryId":"2077456","fcl":"S","population":0,"countryCode":"AU","name":"Shepparton
+        Airport","fclName":"spot, building, farm","countryName":"Australia","fcodeName":"airport","adminName1":"Victoria","lat":"-36.4289","fcode":"AIRP"}]}'
+    http_version: 
+  recorded_at: Fri, 25 Nov 2016 10:50:39 GMT
 recorded_with: VCR 3.0.3

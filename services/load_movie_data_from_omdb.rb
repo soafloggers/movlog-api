@@ -53,7 +53,14 @@ class LoadMovieFromOmdb
     movie = Movie.create(imdb_id: movlog_movie.imdb_id, title: movlog_movie.title,
                          actors: movlog_movie.actors, plot: movlog_movie.plot)
     locations = JSON.parse(movlog_movie.get_location)
-    locations.each do |location|
+    locations.each do |loc_name|
+      loc_name = loc_name.split(', ').first
+      airport_info = Geonames::AirportInfo.find(loc_name)
+      location = {
+        name: loc_name,
+        lat: airport_info.lat,
+        lng: airport_info.lng
+      }
       write_movie_location(movie, location)
     end
     Right(movie)
@@ -74,8 +81,17 @@ class LoadMovieFromOmdb
 
   def self.write_movie_location(movie, location)
     movie.add_location(
-      name:           name,
-      airport:        'air'
+      name: location[:name],
+      lat: location[:lat],
+      lng: location[:lng]
     )
+  end
+
+  def self.write_location_airports(location, airports)
+    airports.each do |airport|
+      Airport.create(name: airport.name,
+                     countryCode: airport.countryCode,
+                     lat: airport.lat, lng: airport.lng)
+    end
   end
 end

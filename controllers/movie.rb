@@ -2,7 +2,7 @@
 
 # MovlogAPI web service
 class MovlogAPI < Sinatra::Base
-  get "/#{API_VER}/:keyword/movie/?" do
+  get "/#{API_VER}/movie/:keyword/?" do
     result = FindMovie.call(params)
 
     if result.success?

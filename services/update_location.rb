@@ -6,32 +6,43 @@ class UpdateLocationFromImdb
   extend Dry::Container::Mixin
 
   register :find_location, lambda { |params|
-
     location_id = params[:id]
-    airport = params[:airport]
+    movie = params[:movie]
     location = Location.find(id: location_id)
     if location
-      Right(location: location, airport: airport)
+      Right(location: location, movie: movie)
     else
       Left(Error.new(:bad_request, 'Location is not stored'))
     end
   }
 
-  register :update_location, lambda { |input|
-    Right(update_location(input[:location], input[:airport]))
+  register :find_movie, lambda { |data|
+    title = data[:movie].gsub(/\+/, " ")
+    movie = Movie.find(title: title)
+
+    if movie
+      Right(location: data[:location], movie_id: movie.id)
+    else
+      Left(Error.new(:bad_request, 'Movie is not stored'))
+    end
+  }
+
+  register :update_location, lambda { |data|
+    Right(update_location(data[:location], data[:movie_id]))
   }
 
   def self.call(params)
     Dry.Transaction(container: self) do
       step :find_location
+      step :find_movie
       step :update_location
     end.call(params)
   end
 
   private_class_method
 
-  def self.update_location(location, airport)
-    location.update(airport: airport)
+  def self.update_location(location, movie_id)
+    location.update(movie_id: movie_id)
     location.save
   end
 end

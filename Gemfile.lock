@@ -55,7 +55,7 @@ GEM
     minitest (5.9.1)
     minitest-rg (5.2.0)
       minitest (~> 5.0)
-    movlog (0.2.12)
+    movlog (0.3.1)
       http (~> 2.0)
       nokogiri (~> 1.6, >= 1.6.8.1)
     multi_json (1.12.1)
@@ -130,7 +130,7 @@ DEPENDENCIES
   json
   minitest
   minitest-rg
-  movlog (= 0.2.12)
+  movlog (= 0.3.1)
   multi_json
   pg
   puma

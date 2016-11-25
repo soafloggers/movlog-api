@@ -22,7 +22,7 @@ describe 'Movie Routes' do
 
     it 'HAPPY: should find a movie given a correct keyword' do
       title = Movie.first.title.gsub(/ /, '+')
-      get "api/v0.1/#{title}/movie"
+      get "api/v0.1/movie/#{title}"
       # print last_response.body.to_s
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'
@@ -31,7 +31,7 @@ describe 'Movie Routes' do
     end
 
     it 'SAD: should report if a movie is not found' do
-      get "api/v0.1/#{SAD_MOVIE}/movie"
+      get "api/v0.1/movie/#{SAD_MOVIE}"
 
       last_response.status.must_equal 404
       last_response.body.must_include SAD_MOVIE

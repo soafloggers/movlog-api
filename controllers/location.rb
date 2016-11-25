@@ -2,7 +2,7 @@
 
 # MovlogAPI web service
 class MovlogAPI < Sinatra::Base
-  get "/#{API_VER}/:keyword/location/?" do
+  get "/#{API_VER}/location/:keyword/?" do
     results = SearchLocations.call(params)
 
     if results.success?
@@ -13,7 +13,7 @@ class MovlogAPI < Sinatra::Base
     end
   end
 
-  put "/#{API_VER}/location/:id/:airport" do
+  put "/#{API_VER}/location/:id/:movie" do
     result = UpdateLocationFromImdb.call(params)
 
     if result.success?

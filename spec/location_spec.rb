@@ -20,7 +20,7 @@ describe 'Location Routes' do
   describe 'Get the filming locations from a movie' do
     it 'HAPPY: should find the filming locations from a movie' do
       title = Movie.first.title.gsub(/ /, '+')
-      get "api/v0.1/#{title}/location"
+      get "api/v0.1/location/#{title}"
 
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'
@@ -29,7 +29,7 @@ describe 'Location Routes' do
     end
 
     it 'SAD: should report if the locations cannot be found' do
-      get "api/v0.1/#{SAD_MOVIE}/location"
+      get "api/v0.1/location/#{SAD_MOVIE}"
 
       last_response.status.must_equal 404
       last_response.body.must_include 'Movie not found'
@@ -47,10 +47,12 @@ describe 'Location Routes' do
 
     it '(HAPPY) should successfully update valid location' do
       original = Location.first
-      put "api/v0.1/location/#{original.id}/aaa"
+      movie = Movie.first.title.gsub(/ /, '+')
+      put "api/v0.1/location/#{original.id}/#{movie}"
+
       last_response.status.must_equal 200
       updated = Location.first
-      updated.airport.must_equal('aaa')
+      updated.movie_id.must_equal(Movie.first.id)
     end
 
     it '(BAD) should report error if given invalid location ID' do
