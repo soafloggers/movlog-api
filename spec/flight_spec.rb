@@ -10,63 +10,30 @@ describe 'Airport specifications' do
     VCR.eject_cassette
   end
 
-  describe 'Find airport by location' do
+  describe 'Find flights by location' do
     before do
       DB[:movies].delete
       DB[:locations].delete
-      # DB[:airports].delete
       post 'api/v0.1/movie',
            { url: HAPPY_MOVIE_URL }.to_json,
            'CONTENT_TYPE' => 'application/json'
     end
 
-    it 'HAPPY: should find airports given a correct location' do
+    it 'HAPPY: should find flights given a correct location' do
       location = Location.first.name.gsub(/ /, '+')
-      get "api/v0.1/airport/#{location}"
-      # print last_response.body.to_s
+      get "api/v0.1/flight/#{HAPPY_FLIGHT}/anytime"
+
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'
-      airport_data = JSON.parse(last_response.body)
-      airport_data['airports'].length.must_be :>=, 0
+      flight_data = JSON.parse(last_response.body)
+      flight_data.length.must_be :>=, 0
     end
 
-    # it 'SAD: should report if a location is not found' do
-    #   get "api/v0.1/movie/#{SAD_LOCATION_ID}"
-    #
-    #   last_response.status.must_equal 404
-    #   # last_response.body.must_include SAD_MOVIE
-    # end
-  end
+    it 'SAD: should report if a location is not found' do
+      get "api/v0.1/flight/#{SAD_FLIGHT}/anytime"
 
-  # describe 'Loading and saving a new movie by movie name' do
-  #   before do
-  #     DB[:movies].delete
-  #     DB[:locations].delete
-  #     DB[:airport].delete
-  #   end
-  #
-  #   it '(HAPPY) should load and save a new movie by its OMDB URL' do
-  #     post 'api/v0.1/movie',
-  #          { url: HAPPY_MOVIE_URL }.to_json,
-  #          'CONTENT_TYPE' => 'application/json'
-  #
-  #     last_response.status.must_equal 200
-  #     last_response.content_type.must_equal 'application/json'
-  #     airport_data = JSON.parse(last_response.body)
-  #     airport_data['airports'].length.must_be :>=, 0
-  #
-  #     Movie.count.must_equal 1
-  #     Location.count.must_be :>=, 1
-  #     Airport.count.must_be :>=, 1
-  #   end
-  #
-  #   it '(BAD) should report error if given invalid URL' do
-  #     post 'api/v0.1/movie',
-  #          { url: SAD_MOVIE_URL }.to_json,
-  #          'CONTENT_TYPE' => 'application/json'
-  #
-  #     last_response.status.must_equal 422
-  #     last_response.body.must_include 'Airport data cannot get'
-  #   end
-  # end
+      last_response.status.must_equal 404
+      # last_response.body.must_include SAD_MOVIE
+    end
+  end
 end
