@@ -2,14 +2,13 @@
 
 # MovlogAPI web service
 class MovlogAPI < Sinatra::Base
-  get "/#{API_VER}/movie/:keyword/?" do
-    result = FindMovie.call(params)
+  get "/#{API_VER}/movie/?" do
+    results = SearchMovies.call(params)
 
-    if result.success?
-      content_type 'application/json'
-      MovieRepresenter.new(result.value).to_json
+    if results.success?
+      MoviesSearchResultsRepresenter.new(results.value).to_json
     else
-      ErrorRepresenter.new(result.value).to_status_response
+      ErrorRepresenter.new(results.value).to_status_response
     end
   end
 

@@ -5,6 +5,7 @@ describe 'API basics' do
   it 'should find configuration information' do
     app.config.SKY_API_KEY.length.must_be :>, 0
     app.config.AIRBNB_CLIENT_ID.length.must_be :>, 0
+    app.config.GEONAMES_USERNAME.length.must_be :>, 0
   end
 
   it 'should successfully find the root route' do

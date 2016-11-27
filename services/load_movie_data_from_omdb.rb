@@ -50,8 +50,12 @@ class LoadMovieFromOmdb
   }
 
   register :create_movie_and_locations, lambda { |movlog_movie|
-    movie = Movie.create(imdb_id: movlog_movie.imdb_id, title: movlog_movie.title,
-                         actors: movlog_movie.actors, plot: movlog_movie.plot)
+    movie = Movie.create(
+      imdb_id: movlog_movie.imdb_id,
+      title: movlog_movie.title,
+      actors: movlog_movie.actors,
+      plot: movlog_movie.plot
+    )
     locations = JSON.parse(movlog_movie.get_location)
     locations.each do |loc_name|
       loc_name = loc_name.split(', ').first
