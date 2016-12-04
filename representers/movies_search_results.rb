@@ -5,5 +5,5 @@ class MoviesSearchResultsRepresenter < Roar::Decorator
   include Roar::JSON
 
   property :search_terms_used
-  property :movies, extend: MovieRepresenter, class: Movie
+  collection :movies, extend: MovieRepresenter, class: Movie
 end
