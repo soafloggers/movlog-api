@@ -20,22 +20,48 @@ describe 'Movie Routes' do
            'CONTENT_TYPE' => 'application/json'
     end
 
-    it 'HAPPY: should find a movie given a correct keyword' do
-      title = Movie.first.title.gsub(/ /, '+')
-      get "api/v0.1/#{title}/movie"
+    # 10.times do
+      it '(HAPPY) should find valid keyword movies' do
+        magic_word = SpecSearch.random_title_word
+        get "api/v0.1/movie?search=#{magic_word[:word]}"
+        puts magic_word[:word]
+        last_response.status.must_equal 200
+        results = JSON.parse(last_response.body)
+        results['search_terms_used'].count.must_equal 1
+        # results['movies'].count.must_equal magic_word[:title_count]
+      end
+    # end
 
-      last_response.status.must_equal 200
-      last_response.content_type.must_equal 'application/json'
-      movie_data = JSON.parse(last_response.body)
-      movie_data['title'].length.must_be :>=, 0
-    end
+    # 5.times do
+      it '(HAPPY) should find valid keyword combination movies' do
+        magic_words = Array.new(3) { SpecSearch.random_title_word }
+        keywords = magic_words.map { |magic| magic[:word] }.join('+')
+        largest_count = magic_words.map { |magic| magic[:messages_count] }.max
 
-    it 'SAD: should report if a movie is not found' do
-      get "api/v0.1/#{SAD_MOVIE}/movie"
+        get "api/v0.1/movie?search=#{keywords}"
+        last_response.status.must_equal 200
+        results = JSON.parse(last_response.body)
+        results['search_terms_used'].count.must_equal magic_words.count
+        # results['movies'].count.must_be :>=, largest_count
+      end
+    # end
 
-      last_response.status.must_equal 404
-      last_response.body.must_include SAD_MOVIE
-    end
+    # it 'HAPPY: should find a movie given a correct keyword' do
+    #   title = Movie.first.title.gsub(/ /, '+')
+    #   get "api/v0.1/movie/#{title}"
+    #   # print last_response.body.to_s
+    #   last_response.status.must_equal 200
+    #   last_response.content_type.must_equal 'application/json'
+    #   movie_data = JSON.parse(last_response.body)
+    #   movie_data['title'].length.must_be :>=, 0
+    # end
+
+    # it 'SAD: should report if a movie is not found' do
+    #   get "api/v0.1/movie/#{SAD_MOVIE}"
+
+    #   last_response.status.must_equal 404
+    #   last_response.body.must_include SAD_MOVIE
+    # end
   end
 
   describe 'Loading and saving a new movie by movie name' do
@@ -63,8 +89,8 @@ describe 'Movie Routes' do
            { url: SAD_MOVIE_URL }.to_json,
            'CONTENT_TYPE' => 'application/json'
 
-      last_response.status.must_equal 400
-      last_response.body.must_include SAD_MOVIE_URL
+      last_response.status.must_equal 422
+      last_response.body.must_include 'Movie data cannot parse title'
     end
 
     it 'should report error if movie already exists' do
