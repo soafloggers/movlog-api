@@ -10,20 +10,22 @@ class SearchLocations
     movie = Movie.find(title: keyword)
 
     if movie
-      Right(movie.id)
+      Right(id: movie.id, title: keyword)
     else
       Left(Error.new(:not_found, 'Movie not found'))
     end
   }
 
-  register :search_locations, lambda { |movie_id|
-    locations = Location.where(movie_id: movie_id).all
-    locations = locations.map do |loc|
-      LocationRepresenter.new(loc).to_json
-    end
-
+  register :search_locations, lambda { |movie|
+    locations = Location.where(movie_id: movie[:id]).all
+    # locations = locations.map do |loc|
+    #   LocationRepresenter.new(loc).to_json
+    # end
+    results = LocationsSearchResults.new(
+      movie[:title], locations
+    )
     if locations
-      Right(locations)
+      Right(results)
     else
       Left(Error.new(:not_found, 'Location not found'))
     end

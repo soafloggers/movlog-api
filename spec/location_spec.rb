@@ -25,7 +25,7 @@ describe 'Location Routes' do
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'
       location_data = JSON.parse(last_response.body)
-      location_data.wont_be_nil
+      location_data['locations'].count.must_be :>, 0
     end
 
     it 'SAD: should report if the locations cannot be found' do
