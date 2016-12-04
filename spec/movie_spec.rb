@@ -24,6 +24,7 @@ describe 'Movie Routes' do
       it '(HAPPY) should find valid keyword movies' do
         magic_word = SpecSearch.random_title_word
         get "api/v0.1/movie?search=#{magic_word[:word]}"
+        puts magic_word[:word]
         last_response.status.must_equal 200
         results = JSON.parse(last_response.body)
         results['search_terms_used'].count.must_equal 1
