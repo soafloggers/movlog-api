@@ -50,24 +50,28 @@ class LoadMovieFromOmdb
   }
 
   register :create_movie_and_locations, lambda { |movlog_movie|
-    movie = Movie.create(
-      imdb_id: movlog_movie.imdb_id,
-      title: movlog_movie.title,
-      actors: movlog_movie.actors,
-      plot: movlog_movie.plot
-    )
-    locations = JSON.parse(movlog_movie.get_location)
-    locations.each do |loc_name|
-      loc_name = loc_name.split(', ').first
-      airport_info = Geonames::AirportInfo.find(loc_name)
-      location = {
-        name: loc_name,
-        lat: airport_info.lat,
-        lng: airport_info.lng
-      }
-      write_movie_location(movie, location)
+    begin
+      movie = Movie.create(
+        imdb_id: movlog_movie.imdb_id,
+        title: movlog_movie.title,
+        actors: movlog_movie.actors,
+        plot: movlog_movie.plot
+      )
+      locations = JSON.parse(movlog_movie.get_location)
+      locations.each do |loc_name|
+        loc_name = loc_name.split(', ').first
+        airport_info = Geonames::AirportInfo.find(loc_name)
+        location = {
+          name: loc_name,
+          lat: airport_info.lat,
+          lng: airport_info.lng
+        }
+        write_movie_location(movie, location)
+      end
+      Right(movie)
+    rescue
+      Left(Error.new(:not_found, 'Movie not found'))
     end
-    Right(movie)
   }
 
   def self.call(params)

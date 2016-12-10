@@ -62,4 +62,14 @@ describe 'Location Routes' do
       last_response.body.must_include 'Location is not stored'
     end
   end
+
+  describe 'Request to get rooms info of a location' do
+    it '(HAPPY) should successfully get rooms of a location' do
+      get "api/v0.1/room/#{HAPPY_LOCATION}"
+
+      rooms = JSON.parse(last_response.body.to_s)
+      rooms.length.must_be :>, 0
+      last_response.status.must_equal 200
+    end
+  end
 end

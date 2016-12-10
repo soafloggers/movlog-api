@@ -37,8 +37,8 @@ SAD_MOVIE_URL = 'http://www.omdbapi.com?t=sadmovie&y=&plot=short&r=json'
 SAD_MOVIE = 'sadmovie'
 SAD_LOCATION_ID = '0000'
 REMOVED_LOCATION_ID = '0000'
-SAD_FLIGHT = 'Ajim'
-HAPPY_FLIGHT = 'California'
+SAD_LOCATION = 'Ajim'
+HAPPY_LOCATION = 'California'
 
 class SpecSearch
   extend WordMagic

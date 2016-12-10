@@ -18,9 +18,6 @@ class SearchLocations
 
   register :search_locations, lambda { |movie|
     locations = Location.where(movie_id: movie[:id]).all
-    # locations = locations.map do |loc|
-    #   LocationRepresenter.new(loc).to_json
-    # end
     results = LocationsSearchResults.new(
       movie[:title], locations
     )
