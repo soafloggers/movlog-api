@@ -1,6 +1,7 @@
 require './init.rb'
 require 'benchmark'
 
+print '# API, Local, No Concurrency:   '
 puts Benchmark.measure {
   1.times {
     movie = Movie.first
@@ -11,6 +12,7 @@ puts Benchmark.measure {
   }
 }.real
 
+print '# API, Local, With Concurrency: '
 puts Benchmark.measure {
   1.times {
     movie = Movie.first
