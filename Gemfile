@@ -8,7 +8,7 @@ gem 'json'
 gem 'econfig'
 gem 'rake'
 
-gem 'movlog', '0.3.1'
+gem 'movlog', '~> 0.3.2'
 gem 'sequel'
 gem 'roar'
 gem 'multi_json'
@@ -16,9 +16,11 @@ gem 'dry-monads'
 gem 'dry-container'
 gem 'dry-transaction'
 
-group :development, :test do
-  gem 'sqlite3'
-end
+gem 'tux'
+gem 'hirb'
+
+gem 'aws-sdk', '~> 2'
+gem 'shoryuken'
 
 group :development do
   gem 'rerun'
@@ -37,9 +39,8 @@ group :test do
   gem 'webmock'
 end
 
-group :development, :production do
-  gem 'tux'
-  gem 'hirb'
+group :development, :test do
+  gem 'sqlite3'
 end
 
 group :production do
