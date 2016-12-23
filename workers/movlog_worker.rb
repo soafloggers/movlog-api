@@ -17,7 +17,6 @@ require_relative '../services/init.rb'
 class MovlogWorker
   extend Econfig::Shortcut
   Econfig.env = ENV['RACK_ENV'] || 'development'
-
   Econfig.root = File.expand_path('..', File.dirname(__FILE__))
 
   Shoryuken.configure_client do |shoryuken_config|
