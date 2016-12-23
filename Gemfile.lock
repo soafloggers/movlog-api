@@ -7,7 +7,7 @@ GEM
     concurrent-ruby (1.0.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    domain_name (0.5.20161021)
+    domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
     dry-configurable (0.3.0)
       concurrent-ruby (~> 1.0)
@@ -55,7 +55,7 @@ GEM
     minitest (5.9.1)
     minitest-rg (5.2.0)
       minitest (~> 5.0)
-    movlog (0.3.1)
+    movlog (0.3.2)
       http (~> 2.0)
       nokogiri (~> 1.6, >= 1.6.8.1)
     multi_json (1.12.1)
@@ -130,7 +130,7 @@ DEPENDENCIES
   json
   minitest
   minitest-rg
-  movlog (= 0.3.1)
+  movlog (= 0.3.2)
   multi_json
   pg
   puma

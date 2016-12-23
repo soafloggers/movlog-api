@@ -2044,4 +2044,115 @@ http_interactions:
       string: '{"Routes":[],"Quotes":[],"Places":[],"Carriers":[],"Currencies":[{"Code":"TWD","Symbol":"NT$","ThousandsSeparator":",","DecimalSeparator":".","SymbolOnLeft":true,"SpaceBetweenAmountAndSymbol":false,"RoundingCoefficient":0,"DecimalDigits":2}]}'
     http_version: 
   recorded_at: Sat, 10 Dec 2016 09:05:15 GMT
+- request:
+    method: get
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Taiwan&username=z255477
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.geonames.org
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 18 Dec 2016 16:46:22 GMT
+      Server:
+      - Apache/2.4.6 (CentOS) mod_jk/1.2.41 OpenSSL/1.0.1e-fips
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Connection:
+      - close
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json;charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"totalResultsCount":2329,"geonames":[{"adminCode1":"00","lng":"121","geonameId":1668284,"toponymName":"Taiwan","countryId":"1668284","fcl":"A","population":22894384,"countryCode":"TW","name":"Taiwan","fclName":"country,
+        state, region,...","countryName":"Taiwan","fcodeName":"independent political
+        entity","adminName1":"","lat":"24","fcode":"PCLI"}]}'
+    http_version: 
+  recorded_at: Sun, 18 Dec 2016 16:46:22 GMT
+- request:
+    method: get
+    uri: http://partners.api.skyscanner.net/apiservices/browseroutes/v1.0/TW/TWD/zh-TW/24.0,121.0-Latlong/37.25022,-119.75126-Latlong/anytime/anytime?apiKey=ni383467859431493982729572338504
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - partners.api.skyscanner.net
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Accept
+      Cache-Control:
+      - public,max-age=3600
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 18 Dec 2016 16:48:02 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '98'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ValidationErrors":[{"Message":"For this query please use the following
+        service [BrowseDates]"}]}'
+    http_version: 
+  recorded_at: Sun, 18 Dec 2016 16:48:03 GMT
+- request:
+    method: get
+    uri: http://partners.api.skyscanner.net/apiservices/browseroutes/v1.0/TW/TWD/zh-TW/24.0,121.0-Latlong/33.72638,10.75664-Latlong/anytime/anytime?apiKey=ni383467859431493982729572338504
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - partners.api.skyscanner.net
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Accept
+      Cache-Control:
+      - public,max-age=3600
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 18 Dec 2016 16:48:02 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '98'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ValidationErrors":[{"Message":"For this query please use the following
+        service [BrowseDates]"}]}'
+    http_version: 
+  recorded_at: Sun, 18 Dec 2016 16:48:03 GMT
 recorded_with: VCR 3.0.3

@@ -6,28 +6,22 @@ class SearchFlights
   extend Dry::Container::Mixin
 
   register :validate_params, lambda { |params|
-    if params[:outbound].nil? || params[:destination].nil?
+    if params[:destination].nil? || params[:origin].nil?
       Left(Error.new(:bad_request, 'Parameters are wrong'))
     else
       params[:destination] = params[:destination].gsub(/\+/, ' ')
+      params[:origin] = params[:origin].gsub(/\+/, ' ')
       Right(params)
     end
   }
 
-  # register :validate_location, lambda { |data|
-  #   location = Location.find(name: data[:destination])
-  #   if location.nil?
-  #     Left(Error.new(:not_found, 'Location not found'))
-  #   else
-  #     data[:destination] = "#{location.lat},#{location.lng}-Latlong"
-  #     Right(data)
-  #   end
-  # }
-
   register :transform_to_geocode, lambda { |data|
     begin
-      airport_info = Geonames::AirportInfo.find(data[:destination])
-      data[:destination] = "#{airport_info.lat},#{airport_info.lng}-Latlong"
+      origin_info = Geonames::AirportInfo.find(data[:origin])
+      destin_info = Geonames::AirportInfo.find(data[:destination])
+      data[:destination] = "#{destin_info.lat},#{destin_info.lng}-Latlong"
+      data[:origin] = "#{origin_info.lat},#{origin_info.lng}-Latlong"
+      data[:outbound] = "anytime" if data[:outbound].nil?
       Right(data)
     rescue
       Left(Error.new(:not_found, 'Location not found'))
@@ -35,12 +29,7 @@ class SearchFlights
   }
 
   register :search_flights, lambda { |data|
-    route_meta = {
-      market: 'TW', currency: 'TWD', locale: 'zh-TW',
-      origin: 'TW', destination: data[:destination],
-      outbound: data[:outbound], inbound: 'anytime'
-    }
-    route = Skyscanner::Route.find(route_meta)
+    route = Skyscanner::Route.find(route_meta(data))
     flights = route.flights
     if flights.length.zero?
       Left(Error.new(:not_found, 'Flight not found'))
@@ -52,9 +41,20 @@ class SearchFlights
   def self.call(params)
     Dry.Transaction(container: self) do
       step :validate_params
-      # step :validate_location
       step :transform_to_geocode
       step :search_flights
     end.call(params)
+  end
+
+  private_class_method
+
+  def self.route_meta(params)
+    puts params[:origin]+"!!!!!!!!!!!!!"
+    puts params[:destination]+"~~~~~~~~~"
+    route_meta = {
+      market: 'TW', currency: 'TWD', locale: 'zh-TW',
+      origin: 'TW', destination: params[:destination],
+      outbound: params[:outbound], inbound: 'anytime'
+    }
   end
 end
