@@ -15,10 +15,10 @@ class LoadMovieFromOmdb
   }
 
   register :validate_request_url, lambda { |body_params|
-    if (fb_group_url = body_params['url']).nil?
+    if (omdb_url = body_params['url']).nil?
       Left(:cannot_process, 'URL not supplied')
     else
-      Right(fb_group_url)
+      Right(omdb_url)
     end
   }
 
