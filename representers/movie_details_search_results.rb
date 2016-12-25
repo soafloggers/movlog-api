@@ -5,6 +5,6 @@ require_relative 'location'
 class MovieDetailsSearchResultsRepresenter < Roar::Decorator
   include Roar::JSON
 
-  property :movie
+  property :movie, extend: MovieRepresenter, class: Movie
   collection :locations, extend: LocationRepresenter, class: Location
 end

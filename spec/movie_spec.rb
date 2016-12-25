@@ -27,7 +27,7 @@ describe 'Movie Routes' do
         puts magic_word[:word]
         last_response.status.must_equal 200
         results = JSON.parse(last_response.body)
-        results['search_terms_used'].count.must_equal 1
+        results['search_terms'].count.must_equal 1
         # results['movies'].count.must_equal magic_word[:title_count]
       end
     # end
@@ -41,7 +41,7 @@ describe 'Movie Routes' do
         get "api/v0.1/movie?search=#{keywords}"
         last_response.status.must_equal 200
         results = JSON.parse(last_response.body)
-        results['search_terms_used'].count.must_equal magic_words.count
+        results['search_terms'].count.must_equal magic_words.count
         # results['movies'].count.must_be :>=, largest_count
       end
     # end

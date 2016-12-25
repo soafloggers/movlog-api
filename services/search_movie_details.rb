@@ -9,14 +9,14 @@ class SearchMovieDetails
     keyword = params[:keyword].gsub(/\+/, ' ')
     movie = Movie.find(title: keyword)
     if movie
-      Right(id: movie.id, title: keyword)
+      Right(movie)
     else
       Left(Error.new(:not_found, 'Movie not found'))
     end
   }
 
   register :search_locations, lambda { |movie|
-    locations = Location.where(movie_id: movie[:id]).all
+    locations = Location.where(movie_id: movie.id).all
     results = MovieDetailsSearchResults.new(
       movie, locations
     )
