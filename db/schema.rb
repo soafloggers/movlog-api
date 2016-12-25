@@ -6,14 +6,17 @@ Sequel.migration do
       primary_key :id
       Integer :movie_id
       String :name, :size=>255
-      Float :lat
-      Float :lng
     end
     
     create_table(:movies) do
       primary_key :id
       String :imdb_id, :size=>255
       String :title, :size=>255
+      String :poster, :size=>255
+      String :rating, :size=>255
+      String :awards, :size=>255
+      String :runtime, :size=>255
+      String :director, :size=>255
       String :actors, :size=>255
       String :plot, :size=>255
     end

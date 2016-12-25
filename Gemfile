@@ -8,7 +8,7 @@ gem 'json'
 gem 'econfig'
 gem 'rake'
 
-gem 'movlog', '~> 0.3.2'
+gem 'movlog', '~> 0.3.5'
 gem 'sequel'
 gem 'roar'
 gem 'multi_json'

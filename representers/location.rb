@@ -6,6 +6,4 @@ class LocationRepresenter < Roar::Decorator
   property :id
   property :movie_id
   property :name
-  property :lat
-  property :lng
 end

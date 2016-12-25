@@ -7,8 +7,6 @@ Sequel.migration do
       primary_key :id
       foreign_key :movie_id
       String :name
-      Float :lat
-      Float :lng
     end
   end
 end

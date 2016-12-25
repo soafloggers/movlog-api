@@ -9,7 +9,7 @@ describe 'Location Routes' do
     DB[:movies].delete
     DB[:locations].delete
     post 'api/v0.1/movie',
-         { url: HAPPY_MOVIE_URL }.to_json,
+         { search: HAPPY_MOVIE }.to_json,
          'CONTENT_TYPE' => 'application/json'
   end
 
@@ -20,7 +20,7 @@ describe 'Location Routes' do
   describe 'Get the filming locations from a movie' do
     it 'HAPPY: should find the filming locations from a movie' do
       title = Movie.first.title.gsub(/ /, '+')
-      get "api/v0.1/location/#{title}"
+      get "api/v0.1/movie/details/#{title}"
 
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'
@@ -29,7 +29,7 @@ describe 'Location Routes' do
     end
 
     it 'SAD: should report if the locations cannot be found' do
-      get "api/v0.1/location/#{SAD_MOVIE}"
+      get "api/v0.1/movie/details/#{SAD_MOVIE}"
 
       last_response.status.must_equal 404
       last_response.body.must_include 'Movie not found'
@@ -41,7 +41,7 @@ describe 'Location Routes' do
       DB[:movies].delete
       DB[:locations].delete
       post 'api/v0.1/movie',
-           { url: HAPPY_MOVIE_URL }.to_json,
+           { search: HAPPY_MOVIE }.to_json,
            'CONTENT_TYPE' => 'application/json'
     end
 

@@ -1,14 +1,13 @@
 # frozen_string_literal: true
 
 # search locations
-class SearchLocations
+class SearchMovieDetails
   extend Dry::Monads::Either::Mixin
   extend Dry::Container::Mixin
 
   register :validate_params, lambda { |params|
     keyword = params[:keyword].gsub(/\+/, ' ')
     movie = Movie.find(title: keyword)
-
     if movie
       Right(id: movie.id, title: keyword)
     else
@@ -18,8 +17,8 @@ class SearchLocations
 
   register :search_locations, lambda { |movie|
     locations = Location.where(movie_id: movie[:id]).all
-    results = LocationsSearchResults.new(
-      movie[:title], locations
+    results = MovieDetailsSearchResults.new(
+      movie, locations
     )
     if locations
       Right(results)

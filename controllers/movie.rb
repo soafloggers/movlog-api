@@ -14,13 +14,14 @@ class MovlogAPI < Sinatra::Base
 
   # Body args (JSON) e.g.: {"url": "http://www.omdbapi.com?t=star+wars&y=&plot=short&r=json"}
   post "/#{API_VER}/movie/?" do
-    result = LoadMovieFromOmdb.call(request.body.read)
+    params = JSON.parse(request.body.read)
+    results = LoadMoviesFromOMDB.call(params['search'])
 
-    if result.success?
+    if results.success?
       content_type 'application/json'
-      MovieRepresenter.new(result.value).to_json
+      MoviesSearchResultsRepresenter.new(results.value).to_json
     else
-      ErrorRepresenter.new(result.value).to_status_response
+      ErrorRepresenter.new(results.value).to_status_response
     end
   end
 end

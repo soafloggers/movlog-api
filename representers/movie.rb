@@ -6,6 +6,11 @@ class MovieRepresenter < Roar::Decorator
 
   property :imdb_id
   property :title
+  property :poster
+  property :rating
+  property :awards
+  property :runtime
+  property :director
   property :actors
   property :plot
 end

@@ -49,8 +49,6 @@ class SearchFlights
   private_class_method
 
   def self.route_meta(params)
-    puts params[:origin]+"!!!!!!!!!!!!!"
-    puts params[:destination]+"~~~~~~~~~"
     route_meta = {
       market: 'TW', currency: 'TWD', locale: 'zh-TW',
       origin: 'TW', destination: params[:destination],

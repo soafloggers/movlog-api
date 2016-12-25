@@ -16,7 +16,7 @@ describe 'Movie Routes' do
       DB[:movies].delete
       DB[:locations].delete
       post 'api/v0.1/movie',
-           { url: HAPPY_MOVIE_URL }.to_json,
+           { search: HAPPY_MOVIE }.to_json,
            'CONTENT_TYPE' => 'application/json'
     end
 
@@ -45,23 +45,6 @@ describe 'Movie Routes' do
         # results['movies'].count.must_be :>=, largest_count
       end
     # end
-
-    # it 'HAPPY: should find a movie given a correct keyword' do
-    #   title = Movie.first.title.gsub(/ /, '+')
-    #   get "api/v0.1/movie/#{title}"
-    #   # print last_response.body.to_s
-    #   last_response.status.must_equal 200
-    #   last_response.content_type.must_equal 'application/json'
-    #   movie_data = JSON.parse(last_response.body)
-    #   movie_data['title'].length.must_be :>=, 0
-    # end
-
-    # it 'SAD: should report if a movie is not found' do
-    #   get "api/v0.1/movie/#{SAD_MOVIE}"
-
-    #   last_response.status.must_equal 404
-    #   last_response.body.must_include SAD_MOVIE
-    # end
   end
 
   describe 'Loading and saving a new movie by movie name' do
@@ -70,27 +53,27 @@ describe 'Movie Routes' do
       DB[:locations].delete
     end
 
-    it '(HAPPY) should load and save a new movie by its OMDB URL' do
+    it '(HAPPY) should load and save a new movie by its title' do
       post 'api/v0.1/movie',
-           { url: HAPPY_MOVIE_URL }.to_json,
+           { search: HAPPY_MOVIE }.to_json,
            'CONTENT_TYPE' => 'application/json'
 
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'
       movie_data = JSON.parse(last_response.body)
-      movie_data['title'].length.must_be :>=, 0
+      movie_data['movies'].length.must_be :>=, 0
 
-      Movie.count.must_equal 1
+      Movie.count.must_be :>=, 1
       Location.count.must_be :>=, 1
     end
 
-    it '(BAD) should report error if given invalid URL' do
+    it '(BAD) should report error if given invalid title' do
       post 'api/v0.1/movie',
            { url: SAD_MOVIE_URL }.to_json,
            'CONTENT_TYPE' => 'application/json'
 
       last_response.status.must_equal 422
-      last_response.body.must_include 'Movie data cannot parse title'
+      last_response.body.must_include 'search_term could not be resolved'
     end
 
     it 'should report error if movie already exists' do

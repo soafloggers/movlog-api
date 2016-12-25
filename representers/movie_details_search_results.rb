@@ -2,9 +2,9 @@
 require_relative 'location'
 
 # Represents overall group information for JSON API output
-class LocationsSearchResultsRepresenter < Roar::Decorator
+class MovieDetailsSearchResultsRepresenter < Roar::Decorator
   include Roar::JSON
 
-  property :movie_title
+  property :movie
   collection :locations, extend: LocationRepresenter, class: Location
 end

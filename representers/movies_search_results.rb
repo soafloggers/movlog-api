@@ -4,6 +4,6 @@ require_relative 'movie'
 class MoviesSearchResultsRepresenter < Roar::Decorator
   include Roar::JSON
 
-  property :search_terms_used
+  property :search_terms
   collection :movies, extend: MovieRepresenter, class: Movie
 end

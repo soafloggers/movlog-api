@@ -7,6 +7,11 @@ Sequel.migration do
       primary_key :id
       String :imdb_id
       String :title
+      String :poster
+      String :rating
+      String :awards
+      String :runtime
+      String :director
       String :actors
       String :plot
     end
