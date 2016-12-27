@@ -25,7 +25,6 @@ class MovlogAPI < Sinatra::Base
   end
 
   get "/#{API_VER}/room/:location/?" do
-    puts params[:location]
     results = SearchRooms.call(params)
 
     if results.success?

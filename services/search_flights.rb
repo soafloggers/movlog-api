@@ -34,6 +34,7 @@ class SearchFlights
     if flights.length.zero?
       Left(Error.new(:not_found, 'Flight not found'))
     else
+      puts flights.first.to_json
       Right(flights.to_json)
     end
   }
