@@ -13,4 +13,7 @@ class MovieRepresenter < Roar::Decorator
   property :director
   property :actors
   property :plot
+  property :year
+  property :released
+  property :genre
 end
