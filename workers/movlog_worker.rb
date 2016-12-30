@@ -19,6 +19,10 @@ class MovlogWorker
   Econfig.env = ENV['RACK_ENV'] || 'development'
   Econfig.root = File.expand_path('..', File.dirname(__FILE__))
 
+  ENV['AWS_REGION'] = MovlogWorker.config.AWS_REGION
+  ENV['AWS_ACCESS_KEY_ID'] = MovlogWorker.config.AWS_ACCESS_KEY_ID
+  ENV['AWS_SECRET_ACCESS_KEY'] = MovlogWorker.config.AWS_SECRET_ACCESS_KEY
+
   Shoryuken.configure_client do |shoryuken_config|
     shoryuken_config.aws = {
       access_key_id:      MovlogWorker.config.AWS_ACCESS_KEY_ID,
