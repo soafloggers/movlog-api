@@ -19,15 +19,6 @@ class MovlogWorker
   Econfig.env = ENV['RACK_ENV'] || 'development'
   Econfig.root = File.expand_path('..', File.dirname(__FILE__))
 
-  ENV['SKY_API_KEY'] = 'ni383467859431493982729572338504'
-  ENV['AIRBNB_CLIENT_ID'] = '3092nxybyb0otqw18e8nh5nty'
-  ENV['GEONAMES_USERNAME'] = 'z255477'
-  ENV['AWS_ACCESS_KEY_ID'] = 'AKIAJKGJ6NBRV7BDSADQ'
-  ENV['AWS_SECRET_ACCESS_KEY'] = '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'
-  ENV['MOVLOG_QUEUE'] = 'movlog'
-  ENV['AWS_REGION'] = 'ap-northeast-1'
-  ENV['API_URL'] = 'http://localhost:9292/api/v0.1'
-
   Shoryuken.configure_client do |shoryuken_config|
     shoryuken_config.aws = {
       access_key_id:      MovlogWorker.config.AWS_ACCESS_KEY_ID,
