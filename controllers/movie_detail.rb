@@ -3,7 +3,7 @@
 # MovlogAPI web service
 class MovlogAPI < Sinatra::Base
   get "/#{API_VER}/movie/details/:keyword/?" do
-    results = SearchMovieDetails.call(params)
+    results = Concurrent::Promise.execute { SearchMovieDetails.call(params) }
 
     if results.success?
       content_type 'application/json'
