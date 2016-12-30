@@ -30,9 +30,13 @@ class MovlogWorker
   include Shoryuken::Worker
   shoryuken_options queue: config.MOVLOG_QUEUE, auto_delete: true
 
-  def perform(_sqs_msg, body)
-    puts "123456787"
-    puts body
+  def perform(_sqs_msg, worker_request)
+    request = JSON.parse(worker_request)
+    result = LoadMoviesFromOMDB.call(
+      request['url_request'],
+      api_url: MovlogWorker.config.API_URL,
+      channel: request['channel_id']
+    )
     # puts queue_test
   end
 end
