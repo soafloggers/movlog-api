@@ -25,8 +25,8 @@ class SearchFlights
 
   register :transform_to_geocode, lambda { |data|
     begin
-      origin_info = Geonames::AirportInfo.find(data[:origin])
-      destin_info = Geonames::AirportInfo.find(data[:destination])
+      origin_info = Airports::AirportInfo.find(data[:origin])
+      destin_info = Airports::AirportInfo.find(data[:destination])
       data[:destination] = "#{destin_info.lat},#{destin_info.lng}-Latlong"
       data[:origin] = "#{origin_info.lat},#{origin_info.lng}-Latlong"
       data[:outbound] = "anytime" if data[:outbound].nil?
@@ -42,7 +42,6 @@ class SearchFlights
     if flights.length.zero?
       Left(Error.new(:not_found, 'Flight not found'))
     else
-      puts flights.first.to_json
       Right(flights.to_json)
     end
   }
