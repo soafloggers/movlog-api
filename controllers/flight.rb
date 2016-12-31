@@ -2,7 +2,7 @@
 
 # MovlogAPI web service
 class MovlogAPI < Sinatra::Base
-  get "/#{API_VER}/airports/:location" do
+  get "/#{API_VER}/airports/fuzzysearch/:location" do
     results = SearchAirports.call(params)
 
     if results.success?
