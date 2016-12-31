@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# search rooms
+# search airports
 class LoadAirportsFromGeonames
   extend Dry::Monads::Either::Mixin
   extend Dry::Container::Mixin
