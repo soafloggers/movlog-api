@@ -74,9 +74,7 @@ class LoadMoviesFromOMDB
   end
 
   def self.write_movie_location(movie, location)
-    movie.add_location(
-      name: location
-    )
+    movie.add_location(name: location)
   end
 
   # def self.write_location_airports(location, airports)
