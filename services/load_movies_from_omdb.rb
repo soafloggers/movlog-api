@@ -68,8 +68,8 @@ class LoadMoviesFromOMDB
     Movie.create(
       imdb_id: movie.imdb_id, title: movie.title, poster: movie.poster,
       plot: movie.plot, rating: movie.rating, awards: movie.awards,
-      runtime: movie.runtime,
-      director: movie.director, actors: movie.actors
+      runtime: movie.runtime, year: movie.year, released: movie.released,
+      director: movie.director, actors: movie.actors, genre: movie.genre
     )
   end
 

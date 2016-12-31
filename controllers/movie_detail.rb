@@ -52,7 +52,7 @@ class MovlogAPI < Sinatra::Base
 
     if results.success?
       content_type 'application/json'
-      results.value.to_json
+      results.value
     else
       ErrorRepresenter.new(results.value).to_status_response
     end

@@ -14,6 +14,9 @@ Sequel.migration do
       String :director
       String :actors
       String :plot
+      String :year
+      String :released
+      String :genre
     end
   end
 end

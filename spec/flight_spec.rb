@@ -20,7 +20,7 @@ describe 'Airport specifications' do
     end
 
     it 'HAPPY: should find flights given a correct location' do
-      get "api/v0.1/flight/Taiwan/#{HAPPY_LOCATION}/anytime"
+      get "api/v0.1/flights/Taiwan/#{HAPPY_LOCATION}/anytime"
 
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'
@@ -30,7 +30,7 @@ describe 'Airport specifications' do
     end
 
     it 'SAD: should report if a location is not found' do
-      get "api/v0.1/flight/Taiwan/#{SAD_LOCATION}/anytime"
+      get "api/v0.1/flights/Taiwan/#{SAD_LOCATION}/anytime"
 
       last_response.status.must_equal 404
       # last_response.body.must_include SAD_MOVIE

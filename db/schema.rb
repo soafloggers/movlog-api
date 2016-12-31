@@ -2,6 +2,15 @@
 # It will be overwritten periodically so do not make changes.
 Sequel.migration do
   change do
+    create_table(:airports) do
+      primary_key :id
+      Integer :location_id
+      String :name, :size=>255
+      String :country_code, :size=>255
+      Float :lat
+      Float :lng
+    end
+    
     create_table(:locations) do
       primary_key :id
       Integer :movie_id
@@ -19,6 +28,9 @@ Sequel.migration do
       String :director, :size=>255
       String :actors, :size=>255
       String :plot, :size=>255
+      String :year, :size=>255
+      String :released, :size=>255
+      String :genre, :size=>255
     end
     
     create_table(:schema_info) do
