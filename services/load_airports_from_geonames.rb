@@ -14,9 +14,9 @@ class LoadAirportsFromGeonames
     end.call(params)
   end
 
-  register :validate_params, lambda { |params|
+  register :validate_params, lambda { |location|
     begin
-      search_terms = AirportsSearchCriteria.new(params[:location])
+      search_terms = AirportsSearchCriteria.new(location)
       Right(search_terms)
     rescue
       Left(Error.new(:cannot_process, 'process params error'))
@@ -49,7 +49,7 @@ class LoadAirportsFromGeonames
           write_airport(airport, data[:location])
         end
       end
-      Right(data[:airports].to_json)
+      Right(data[:airports])
     rescue
       Left(Error.new(:not_found, 'Airports create failed'))
     end

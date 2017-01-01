@@ -20,8 +20,7 @@ describe 'Airport specifications' do
     end
 
     it 'HAPPY: should find flights given a correct location' do
-      get "api/v0.1/flights/Taiwan/#{HAPPY_LOCATION}/anytime"
-
+      get "api/v0.1/flights/#{HAPPY_ORIGIN}/#{HAPPY_DESTINATION}/anytime"
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'
       flight_data = JSON.parse(last_response.body)

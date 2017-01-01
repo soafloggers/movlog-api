@@ -6138,4 +6138,606 @@ http_interactions:
         Mn1dfQ==
     http_version: 
   recorded_at: Sat, 31 Dec 2016 13:11:47 GMT
+- request:
+    method: get
+    uri: http://partners.api.skyscanner.net/apiservices/browsedates/v1.0/TW/TWD/en-US/23.69781,120.960515-Latlong/36.778261,-119.4179324-Latlong/anytime/anytime?apiKey=ni383467859431493982729572338504
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - partners.api.skyscanner.net
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept
+      Cache-Control:
+      - public,max-age=3600
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 01 Jan 2017 09:15:58 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '277'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Dates":{"OutboundDates":[],"InboundDates":[]},"Quotes":[],"Places":[],"Carriers":[],"Currencies":[{"Code":"TWD","Symbol":"NT$","ThousandsSeparator":",","DecimalSeparator":".","SymbolOnLeft":true,"SpaceBetweenAmountAndSymbol":false,"RoundingCoefficient":0,"DecimalDigits":2}]}'
+    http_version: 
+  recorded_at: Sun, 01 Jan 2017 09:15:58 GMT
+- request:
+    method: get
+    uri: http://partners.api.skyscanner.net/apiservices/browsedates/v1.0/TW/TWD/en-US/23.69781,120.960515-Latlong/33.7322543,10.7605239-Latlong/anytime/anytime?apiKey=ni383467859431493982729572338504
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - partners.api.skyscanner.net
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept
+      Cache-Control:
+      - public,max-age=3600
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 01 Jan 2017 09:15:58 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '277'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Dates":{"OutboundDates":[],"InboundDates":[]},"Quotes":[],"Places":[],"Carriers":[],"Currencies":[{"Code":"TWD","Symbol":"NT$","ThousandsSeparator":",","DecimalSeparator":".","SymbolOnLeft":true,"SpaceBetweenAmountAndSymbol":false,"RoundingCoefficient":0,"DecimalDigits":2}]}'
+    http_version: 
+  recorded_at: Sun, 01 Jan 2017 09:15:58 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=48.85341,2.3488-Latlong&key=AIzaSyDD0FgUKqfUupluqIaRU5eKWxGBcOSFmzs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 01 Jan 2017 09:23:05 GMT
+      Expires:
+      - Mon, 02 Jan 2017 09:23:05 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="35,34"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [],
+           "status" : "ZERO_RESULTS"
+        }
+    http_version: 
+  recorded_at: Sun, 01 Jan 2017 09:23:05 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=America&key=AIzaSyDD0FgUKqfUupluqIaRU5eKWxGBcOSFmzs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 01 Jan 2017 09:32:32 GMT
+      Expires:
+      - Mon, 02 Jan 2017 09:32:32 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="35,34"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "United States",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 71.5388001,
+                          "lng" : -66.885417
+                       },
+                       "southwest" : {
+                          "lat" : 18.7763,
+                          "lng" : 170.5957
+                       }
+                    },
+                    "location" : {
+                       "lat" : 37.09024,
+                       "lng" : -95.712891
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 49.38,
+                          "lng" : -66.94
+                       },
+                       "southwest" : {
+                          "lat" : 25.82,
+                          "lng" : -124.39
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
+                 "types" : [ "country", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sun, 01 Jan 2017 09:32:32 GMT
+- request:
+    method: get
+    uri: http://partners.api.skyscanner.net/apiservices/browsedates/v1.0/TW/TWD/en-US/23.69781,120.960515-Latlong/37.09024,-95.712891-Latlong/anytime/anytime?apiKey=ni383467859431493982729572338504
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - partners.api.skyscanner.net
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Vary:
+      - Accept
+      Cache-Control:
+      - public,max-age=3600
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 01 Jan 2017 09:32:32 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '302'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"ValidationErrors":[{"ParameterName":"DestinationPlace","ParameterValue":"37.09024,-95.712891","Message":"Airport
+        not found within 100 miles of this location"},{"ParameterName":"DestinationPlace","ParameterValue":"37.09024,-95.712891","Message":"Airport
+        not found within 100 miles of this location"}]}'
+    http_version: 
+  recorded_at: Sun, 01 Jan 2017 09:32:33 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=US&key=AIzaSyDD0FgUKqfUupluqIaRU5eKWxGBcOSFmzs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 01 Jan 2017 09:33:34 GMT
+      Expires:
+      - Mon, 02 Jan 2017 09:33:34 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="35,34"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "United States",
+                       "short_name" : "US",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "United States",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 71.5388001,
+                          "lng" : -66.885417
+                       },
+                       "southwest" : {
+                          "lat" : 18.7763,
+                          "lng" : 170.5957
+                       }
+                    },
+                    "location" : {
+                       "lat" : 37.09024,
+                       "lng" : -95.712891
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 49.38,
+                          "lng" : -66.94
+                       },
+                       "southwest" : {
+                          "lat" : 25.82,
+                          "lng" : -124.39
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJCzYy5IS16lQRQrfeQ5K5Oxw",
+                 "types" : [ "country", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sun, 01 Jan 2017 09:33:35 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Taiwan%20Taoyuan%20International%20Airport&key=AIzaSyDD0FgUKqfUupluqIaRU5eKWxGBcOSFmzs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 01 Jan 2017 09:37:58 GMT
+      Expires:
+      - Mon, 02 Jan 2017 09:37:58 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="35,34"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Taiwan Taoyuan International Airport",
+                       "short_name" : "Taiwan Taoyuan International Airport",
+                       "types" : [ "establishment", "point_of_interest" ]
+                    },
+                    {
+                       "long_name" : "9",
+                       "short_name" : "9",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Hangzhan South Road",
+                       "short_name" : "Hangzhan S Rd",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Dayuan District",
+                       "short_name" : "Dayuan District",
+                       "types" : [ "administrative_area_level_3", "political" ]
+                    },
+                    {
+                       "long_name" : "Taoyuan City",
+                       "short_name" : "Taoyuan City",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "Taiwan",
+                       "short_name" : "TW",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "33758",
+                       "short_name" : "33758",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "Taiwan Taoyuan International Airport, No. 9, Hangzhan S Rd, Dayuan District, Taoyuan City, Taiwan 33758",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 25.0796514,
+                       "lng" : 121.234217
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 25.0810003802915,
+                          "lng" : 121.2355659802915
+                       },
+                       "southwest" : {
+                          "lat" : 25.0783024197085,
+                          "lng" : 121.2328680197085
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJ1RXSYsCfQjQRCbG1qZC2o3A",
+                 "types" : [ "airport", "establishment", "point_of_interest" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sun, 01 Jan 2017 09:37:57 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/geocode/json?address=Auckland%20International%20Airport&key=AIzaSyDD0FgUKqfUupluqIaRU5eKWxGBcOSFmzs
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 01 Jan 2017 09:37:58 GMT
+      Expires:
+      - Mon, 02 Jan 2017 09:37:58 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="35,34"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Auckland Airport",
+                       "short_name" : "Auckland Airport",
+                       "types" : [ "establishment", "point_of_interest" ]
+                    },
+                    {
+                       "long_name" : "Ray Emery Drive",
+                       "short_name" : "Ray Emery Dr",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Auckland Airport",
+                       "short_name" : "Auckland Airport",
+                       "types" : [ "political", "sublocality", "sublocality_level_1" ]
+                    },
+                    {
+                       "long_name" : "Auckland",
+                       "short_name" : "Auckland",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Auckland",
+                       "short_name" : "Auckland",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "New Zealand",
+                       "short_name" : "NZ",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "2022",
+                       "short_name" : "2022",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "Auckland Airport Ray Emery Dr, Auckland Airport, Auckland 2022, New Zealand",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : -37.0082476,
+                       "lng" : 174.7850358
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : -37.00689861970849,
+                          "lng" : 174.7863847802915
+                       },
+                       "southwest" : {
+                          "lat" : -37.00959658029149,
+                          "lng" : 174.7836868197085
+                       }
+                    }
+                 },
+                 "place_id" : "ChIJu9XzfuhPDW0RMHGbJGLvAA8",
+                 "types" : [ "airport", "establishment", "point_of_interest" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sun, 01 Jan 2017 09:37:58 GMT
+- request:
+    method: get
+    uri: http://partners.api.skyscanner.net/apiservices/browsedates/v1.0/TW/TWD/en-US/25.0796514,121.234217-Latlong/-37.0082476,174.7850358-Latlong/anytime/anytime?apiKey=ni383467859431493982729572338504
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - partners.api.skyscanner.net
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept
+      Cache-Control:
+      - public,max-age=3600
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 01 Jan 2017 09:38:00 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '21698'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Dates":{"OutboundDates":[{"PartialDate":"2017-01","QuoteIds":[1,2,3,4,5,6,7],"Price":16768.0,"QuoteDateTime":"2016-12-19T09:31:00"},{"PartialDate":"2017-02","QuoteIds":[8,9,10,11,12,13,14,15],"Price":12943.0,"QuoteDateTime":"2016-12-20T23:58:00"},{"PartialDate":"2017-04","QuoteIds":[16,17,18,19,20,21],"Price":15149.0,"QuoteDateTime":"2016-12-20T05:33:00"},{"PartialDate":"2017-03","QuoteIds":[22,23,24,25,26,27,28,29],"Price":13838.0,"QuoteDateTime":"2016-12-19T15:25:00"},{"PartialDate":"2017-06","QuoteIds":[30,31,32,33],"Price":11838.0,"QuoteDateTime":"2016-12-19T03:48:00"},{"PartialDate":"2017-09","QuoteIds":[34,35,36,37],"Price":12007.0,"QuoteDateTime":"2016-12-18T08:25:00"},{"PartialDate":"2017-08","QuoteIds":[38,39,40,41,42],"Price":11935.0,"QuoteDateTime":"2016-12-18T08:18:00"},{"PartialDate":"2017-11","QuoteIds":[43,44],"Price":16526.0,"QuoteDateTime":"2016-12-27T01:07:00"},{"PartialDate":"2017-05","QuoteIds":[45,46,47,48,49,50],"Price":11838.0,"QuoteDateTime":"2016-12-19T08:02:00"},{"PartialDate":"2017-10","QuoteIds":[51,52],"Price":11838.0,"QuoteDateTime":"2016-12-27T10:25:00"},{"PartialDate":"2017-07","QuoteIds":[53,54,55,56,57,58],"Price":11844.0,"QuoteDateTime":"2016-12-22T10:49:00"},{"PartialDate":"2017-12","QuoteIds":[59],"Price":25372.0,"QuoteDateTime":"2016-12-19T06:19:00"}],"InboundDates":[{"PartialDate":"2017-02","QuoteIds":[1,10],"Price":13838.0,"QuoteDateTime":"2016-12-19T09:31:00"},{"PartialDate":"2017-05","QuoteIds":[2,19,23,46],"Price":11838.0,"QuoteDateTime":"2016-12-20T10:42:00"},{"PartialDate":"2017-04","QuoteIds":[3,9,18,22],"Price":15573.0,"QuoteDateTime":"2016-12-20T14:43:00"},{"PartialDate":"2017-08","QuoteIds":[4,13,25,32,40,49,53],"Price":11935.0,"QuoteDateTime":"2016-12-20T08:10:00"},{"PartialDate":"2017-09","QuoteIds":[5,12,21,26,31,36,41,45,56],"Price":11976.0,"QuoteDateTime":"2016-12-20T23:58:00"},{"PartialDate":"2017-07","QuoteIds":[6,17,24,30,48,54],"Price":11844.0,"QuoteDateTime":"2016-12-19T03:48:00"},{"PartialDate":"2017-12","QuoteIds":[7,14,28,37,42,43,50,58,59],"Price":19413.0,"QuoteDateTime":"2016-12-18T12:25:00"},{"PartialDate":"2017-06","QuoteIds":[8,16,33,47],"Price":11838.0,"QuoteDateTime":"2016-12-21T08:36:00"},{"PartialDate":"2017-03","QuoteIds":[11,27],"Price":13838.0,"QuoteDateTime":"2017-01-01T01:27:00"},{"PartialDate":"2017-11","QuoteIds":[15,29,34,38,44,52,57],"Price":16526.0,"QuoteDateTime":"2016-12-18T08:18:00"},{"PartialDate":"2017-10","QuoteIds":[20,35,39,51,55],"Price":11838.0,"QuoteDateTime":"2016-12-22T10:49:00"}]},"Quotes":[{"QuoteId":1,"MinPrice":16768.0,"Direct":false,"OutboundLeg":{"CarrierIds":[929],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-01-16T00:00:00"},"InboundLeg":{"CarrierIds":[929],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-02-15T00:00:00"},"QuoteDateTime":"2016-12-19T09:31:00"},{"QuoteId":2,"MinPrice":22169.0,"Direct":false,"OutboundLeg":{"CarrierIds":[929],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-01-11T00:00:00"},"InboundLeg":{"CarrierIds":[929],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-05-26T00:00:00"},"QuoteDateTime":"2016-12-26T01:55:00"},{"QuoteId":3,"MinPrice":19976.0,"Direct":false,"OutboundLeg":{"CarrierIds":[929],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-01-10T00:00:00"},"InboundLeg":{"CarrierIds":[929],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-04-12T00:00:00"},"QuoteDateTime":"2016-12-20T14:43:00"},{"QuoteId":4,"MinPrice":23339.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-01-09T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-08-14T00:00:00"},"QuoteDateTime":"2016-12-20T08:10:00"},{"QuoteId":5,"MinPrice":27481.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-01-29T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-09-01T00:00:00"},"QuoteDateTime":"2016-12-30T05:13:00"},{"QuoteId":6,"MinPrice":20994.0,"Direct":false,"OutboundLeg":{"CarrierIds":[929],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-01-09T00:00:00"},"InboundLeg":{"CarrierIds":[929],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-07-01T00:00:00"},"QuoteDateTime":"2016-12-22T00:23:00"},{"QuoteId":7,"MinPrice":27076.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-01-30T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-12-15T00:00:00"},"QuoteDateTime":"2017-01-01T04:58:00"},{"QuoteId":8,"MinPrice":13034.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-02-18T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-06-18T00:00:00"},"QuoteDateTime":"2016-12-26T02:23:00"},{"QuoteId":9,"MinPrice":18275.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-02-23T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-04-04T00:00:00"},"QuoteDateTime":"2016-12-30T08:50:00"},{"QuoteId":10,"MinPrice":13838.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-02-19T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-02-26T00:00:00"},"QuoteDateTime":"2017-01-01T05:53:00"},{"QuoteId":11,"MinPrice":13838.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-02-24T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-03-04T00:00:00"},"QuoteDateTime":"2017-01-01T01:27:00"},{"QuoteId":12,"MinPrice":14199.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-02-13T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-09-13T00:00:00"},"QuoteDateTime":"2016-12-20T23:58:00"},{"QuoteId":13,"MinPrice":12943.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-02-24T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-08-01T00:00:00"},"QuoteDateTime":"2016-12-30T05:03:00"},{"QuoteId":14,"MinPrice":19413.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-02-24T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-12-06T00:00:00"},"QuoteDateTime":"2016-12-31T04:07:00"},{"QuoteId":15,"MinPrice":18810.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-02-27T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-11-30T00:00:00"},"QuoteDateTime":"2016-12-27T03:56:00"},{"QuoteId":16,"MinPrice":15679.0,"Direct":false,"OutboundLeg":{"CarrierIds":[954],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-04-06T00:00:00"},"InboundLeg":{"CarrierIds":[954],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-06-09T00:00:00"},"QuoteDateTime":"2016-12-21T08:36:00"},{"QuoteId":17,"MinPrice":16693.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1429],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-04-11T00:00:00"},"InboundLeg":{"CarrierIds":[1429],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-07-09T00:00:00"},"QuoteDateTime":"2016-12-20T05:33:00"},{"QuoteId":18,"MinPrice":15573.0,"Direct":false,"OutboundLeg":{"CarrierIds":[954],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-04-13T00:00:00"},"InboundLeg":{"CarrierIds":[954],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-04-28T00:00:00"},"QuoteDateTime":"2016-12-27T18:00:00"},{"QuoteId":19,"MinPrice":15149.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-04-30T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-05-10T00:00:00"},"QuoteDateTime":"2016-12-31T10:36:00"},{"QuoteId":20,"MinPrice":16481.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1429],"OriginId":84641,"DestinationId":40492,"DepartureDate":"2017-04-06T00:00:00"},"InboundLeg":{"CarrierIds":[1429],"OriginId":40492,"DestinationId":84641,"DepartureDate":"2017-10-01T00:00:00"},"QuoteDateTime":"2016-12-31T08:22:00"},{"QuoteId":21,"MinPrice":16655.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1429],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-04-06T00:00:00"},"InboundLeg":{"CarrierIds":[1429],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-09-06T00:00:00"},"QuoteDateTime":"2016-12-25T06:54:00"},{"QuoteId":22,"MinPrice":15869.0,"Direct":false,"OutboundLeg":{"CarrierIds":[954],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-03-09T00:00:00"},"InboundLeg":{"CarrierIds":[954],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-04-23T00:00:00"},"QuoteDateTime":"2016-12-27T06:42:00"},{"QuoteId":23,"MinPrice":15718.0,"Direct":false,"OutboundLeg":{"CarrierIds":[954],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-03-15T00:00:00"},"InboundLeg":{"CarrierIds":[954],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-05-17T00:00:00"},"QuoteDateTime":"2016-12-20T10:42:00"},{"QuoteId":24,"MinPrice":16781.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1429],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-03-31T00:00:00"},"InboundLeg":{"CarrierIds":[1429],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-07-15T00:00:00"},"QuoteDateTime":"2016-12-20T01:24:00"},{"QuoteId":25,"MinPrice":16838.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-03-16T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-08-22T00:00:00"},"QuoteDateTime":"2016-12-22T17:33:00"},{"QuoteId":26,"MinPrice":17956.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-03-01T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-09-13T00:00:00"},"QuoteDateTime":"2016-12-20T23:59:00"},{"QuoteId":27,"MinPrice":13838.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-03-11T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-03-14T00:00:00"},"QuoteDateTime":"2017-01-01T05:09:00"},{"QuoteId":28,"MinPrice":25107.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-03-11T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-12-04T00:00:00"},"QuoteDateTime":"2016-12-19T15:25:00"},{"QuoteId":29,"MinPrice":23431.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-03-10T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-11-30T00:00:00"},"QuoteDateTime":"2016-12-28T14:51:00"},{"QuoteId":30,"MinPrice":15635.0,"Direct":false,"OutboundLeg":{"CarrierIds":[954],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-06-11T00:00:00"},"InboundLeg":{"CarrierIds":[954],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-07-21T00:00:00"},"QuoteDateTime":"2016-12-19T03:48:00"},{"QuoteId":31,"MinPrice":15667.0,"Direct":false,"OutboundLeg":{"CarrierIds":[954],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-06-21T00:00:00"},"InboundLeg":{"CarrierIds":[954],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-09-01T00:00:00"},"QuoteDateTime":"2016-12-23T05:17:00"},{"QuoteId":32,"MinPrice":12147.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-06-16T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-08-05T00:00:00"},"QuoteDateTime":"2016-12-20T23:42:00"},{"QuoteId":33,"MinPrice":11838.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-06-06T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-06-20T00:00:00"},"QuoteDateTime":"2017-01-01T01:57:00"},{"QuoteId":34,"MinPrice":16839.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1429],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-09-01T00:00:00"},"InboundLeg":{"CarrierIds":[1429],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-11-30T00:00:00"},"QuoteDateTime":"2016-12-18T08:25:00"},{"QuoteId":35,"MinPrice":12007.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-09-27T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-10-14T00:00:00"},"QuoteDateTime":"2016-12-25T03:20:00"},{"QuoteId":36,"MinPrice":12007.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-09-05T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-09-19T00:00:00"},"QuoteDateTime":"2016-12-25T16:58:00"},{"QuoteId":37,"MinPrice":24496.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-09-21T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-12-07T00:00:00"},"QuoteDateTime":"2016-12-18T12:25:00"},{"QuoteId":38,"MinPrice":16839.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1429],"OriginId":84641,"DestinationId":40492,"DepartureDate":"2017-08-31T00:00:00"},"InboundLeg":{"CarrierIds":[1429],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-11-30T00:00:00"},"QuoteDateTime":"2016-12-18T08:18:00"},{"QuoteId":39,"MinPrice":16757.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1429],"OriginId":84641,"DestinationId":40492,"DepartureDate":"2017-08-15T00:00:00"},"InboundLeg":{"CarrierIds":[1429],"OriginId":40492,"DestinationId":84641,"DepartureDate":"2017-10-13T00:00:00"},"QuoteDateTime":"2016-12-23T02:59:00"},{"QuoteId":40,"MinPrice":11935.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-08-18T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-08-24T00:00:00"},"QuoteDateTime":"2016-12-30T06:14:00"},{"QuoteId":41,"MinPrice":11976.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-08-17T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-09-05T00:00:00"},"QuoteDateTime":"2016-12-28T12:24:00"},{"QuoteId":42,"MinPrice":53821.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-08-11T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-12-28T00:00:00"},"QuoteDateTime":"2016-12-28T09:03:00"},{"QuoteId":43,"MinPrice":22391.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1429],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-11-22T00:00:00"},"InboundLeg":{"CarrierIds":[1429],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-12-06T00:00:00"},"QuoteDateTime":"2016-12-27T01:07:00"},{"QuoteId":44,"MinPrice":16526.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-11-03T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-11-13T00:00:00"},"QuoteDateTime":"2017-01-01T04:10:00"},{"QuoteId":45,"MinPrice":19219.0,"Direct":false,"OutboundLeg":{"CarrierIds":[929],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-05-06T00:00:00"},"InboundLeg":{"CarrierIds":[929],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-09-24T00:00:00"},"QuoteDateTime":"2016-12-21T12:42:00"},{"QuoteId":46,"MinPrice":11838.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-05-01T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-05-10T00:00:00"},"QuoteDateTime":"2016-12-31T23:10:00"},{"QuoteId":47,"MinPrice":11838.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-05-01T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-06-15T00:00:00"},"QuoteDateTime":"2017-01-01T06:34:00"},{"QuoteId":48,"MinPrice":12072.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-05-15T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-07-30T00:00:00"},"QuoteDateTime":"2016-12-19T13:45:00"},{"QuoteId":49,"MinPrice":11976.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-05-11T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-08-11T00:00:00"},"QuoteDateTime":"2016-12-28T13:49:00"},{"QuoteId":50,"MinPrice":27126.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-05-31T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-12-19T00:00:00"},"QuoteDateTime":"2016-12-19T08:02:00"},{"QuoteId":51,"MinPrice":11838.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-10-04T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-10-11T00:00:00"},"QuoteDateTime":"2016-12-31T21:08:00"},{"QuoteId":52,"MinPrice":17024.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-10-22T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-11-10T00:00:00"},"QuoteDateTime":"2016-12-27T10:25:00"},{"QuoteId":53,"MinPrice":12019.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-07-10T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-08-17T00:00:00"},"QuoteDateTime":"2016-12-29T08:14:00"},{"QuoteId":54,"MinPrice":11844.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-07-10T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-07-24T00:00:00"},"QuoteDateTime":"2016-12-31T08:11:00"},{"QuoteId":55,"MinPrice":16838.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-07-07T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-10-03T00:00:00"},"QuoteDateTime":"2016-12-22T10:49:00"},{"QuoteId":56,"MinPrice":12037.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-07-12T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-09-05T00:00:00"},"QuoteDateTime":"2016-12-27T13:19:00"},{"QuoteId":57,"MinPrice":17783.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-07-24T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-11-21T00:00:00"},"QuoteDateTime":"2016-12-23T16:37:00"},{"QuoteId":58,"MinPrice":21278.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-07-24T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-12-22T00:00:00"},"QuoteDateTime":"2016-12-23T16:37:00"},{"QuoteId":59,"MinPrice":25372.0,"Direct":false,"OutboundLeg":{"CarrierIds":[843],"OriginId":84501,"DestinationId":40492,"DepartureDate":"2017-12-02T00:00:00"},"InboundLeg":{"CarrierIds":[843],"OriginId":40492,"DestinationId":84501,"DepartureDate":"2017-12-10T00:00:00"},"QuoteDateTime":"2016-12-19T06:19:00"}],"Places":[{"PlaceId":40492,"IataCode":"AKL","Name":"Auckland
+        International","Type":"Station","SkyscannerCode":"AKL","CityName":"Auckland","CityId":"AKLN","CountryName":"New
+        Zealand"},{"PlaceId":84501,"IataCode":"TPE","Name":"Taipei Taiwan Taoyuan","Type":"Station","SkyscannerCode":"TPE","CityName":"Taipei","CityId":"TPET","CountryName":"Taiwan"},{"PlaceId":84641,"IataCode":"TSA","Name":"Taipei
+        Sung Shan","Type":"Station","SkyscannerCode":"TSA","CityName":"Taipei","CityId":"TPET","CountryName":"Taiwan"}],"Carriers":[{"CarrierId":843,"Name":"AirAsia"},{"CarrierId":929,"Name":"Air
+        China"},{"CarrierId":954,"Name":"China Southern"},{"CarrierId":1429,"Name":"China
+        Eastern"}],"Currencies":[{"Code":"TWD","Symbol":"NT$","ThousandsSeparator":",","DecimalSeparator":".","SymbolOnLeft":true,"SpaceBetweenAmountAndSymbol":false,"RoundingCoefficient":0,"DecimalDigits":2}]}'
+    http_version: 
+  recorded_at: Sun, 01 Jan 2017 09:38:00 GMT
 recorded_with: VCR 3.0.3

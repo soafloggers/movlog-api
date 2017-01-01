@@ -5,6 +5,5 @@ require_relative 'room'
 class AirportsSearchResultsRepresenter < Roar::Decorator
   include Roar::JSON
 
-  property :location
   collection :airports, extend: AirportRepresenter, class: Airport
 end
