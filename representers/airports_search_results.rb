@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-require_relative 'room'
+require_relative 'airport'
 
 # Represents overall room information for JSON API output
 class AirportsSearchResultsRepresenter < Roar::Decorator
