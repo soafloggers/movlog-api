@@ -14,7 +14,7 @@ class MoviesQuery
 
   def self.where_clause(search_terms)
     search_terms.map do |term|
-      Sequel.ilike(:title, "%#{term}%")
+      Sequel.ilike(:title, "#{term}", "% #{term} %", "% #{term}%", "%#{term} %")
     end.inject(&:|)
   end
 end
