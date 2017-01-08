@@ -39,6 +39,5 @@ class MovlogWorker
       api_url: MovlogWorker.config.API_URL,
       channel: request['channel_id']
     )
-    # puts queue_test
   end
 end
