@@ -39,5 +39,17 @@ class MovlogWorker
       api_url: MovlogWorker.config.API_URL,
       channel: request['channel_id']
     )
+    publish(request['channel_id'], 'failed') unless result.success?
+  end
+
+  def publish(channel_id, message)
+    return unless channel_id
+    HTTP.headers('Content-Type' => 'application/json').post(
+      "#{MovlogWorker.config.API_URL}/faye",
+      json: {
+        channel: "/#{channel_id}",
+        data: message
+      }
+    )
   end
 end
