@@ -1518,7 +1518,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:40 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Ajim&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Ajim&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1556,7 +1556,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:41 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Chott%20el%20Djerid&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Chott%20el%20Djerid&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1595,7 +1595,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:41 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Bouhlel&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Bouhlel&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1634,7 +1634,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:42 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Elstree%20Studios&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Elstree%20Studios&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1673,7 +1673,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:43 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Death%20Valley%20National%20Park&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Death%20Valley%20National%20Park&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1712,7 +1712,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:44 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Tikal%20National%20Park&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Tikal%20National%20Park&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1751,7 +1751,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:45 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Driss%20Hotel&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Driss%20Hotel&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1790,7 +1790,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:45 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Yuma&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Yuma&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1829,7 +1829,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:46 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Shepperton%20Studios&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Shepperton%20Studios&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -3384,7 +3384,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:48 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Ajim&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Ajim&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -3422,7 +3422,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:49 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Chott%20el%20Djerid&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Chott%20el%20Djerid&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -3461,7 +3461,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:49 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Bouhlel&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Bouhlel&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -3500,7 +3500,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:50 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Elstree%20Studios&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Elstree%20Studios&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -3539,7 +3539,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:51 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Death%20Valley%20National%20Park&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Death%20Valley%20National%20Park&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -3578,7 +3578,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:52 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Tikal%20National%20Park&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Tikal%20National%20Park&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -3617,7 +3617,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:53 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Driss%20Hotel&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Driss%20Hotel&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -3656,7 +3656,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:54 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Yuma&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Yuma&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -3695,7 +3695,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:54 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Shepperton%20Studios&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Shepperton%20Studios&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -3734,7 +3734,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:04:55 GMT
 - request:
     method: get
-    uri: https://api.airbnb.com/v2/search_results?client_id=3092nxybyb0otqw18e8nh5nty&location=
+    uri: https://api.airbnb.com/v2/search_results?client_id=<AIRBNB_CLIENT_ID>&location=
     body:
       encoding: US-ASCII
       string: ''
@@ -3994,7 +3994,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:05:02 GMT
 - request:
     method: get
-    uri: https://api.airbnb.com/v2/search_results?client_id=3092nxybyb0otqw18e8nh5nty&location=%7B:location=%3E%22California%22%7D
+    uri: https://api.airbnb.com/v2/search_results?client_id=<AIRBNB_CLIENT_ID>&location=%7B:location=%3E%22California%22%7D
     body:
       encoding: US-ASCII
       string: ''
@@ -15644,4 +15644,244 @@ http_interactions:
         KTsKICAgIH0KPC9zY3JpcHQ+CgogICAgPC9ib2R5Pgo8L2h0bWw+Cg==
     http_version: 
   recorded_at: Sun, 25 Dec 2016 22:14:32 GMT
+- request:
+    method: post
+    uri: https://sqs.ap-northeast-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=movlog&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-darwin14
+      X-Amz-Date:
+      - 20170108T114111Z
+      Host:
+      - sqs.ap-northeast-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 8009e3b764938f41cfe1d3036b32a638b0fe7a5a078a947a5a2e94bcabfb6fd0
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI7GDT3TVT35KUTYQ/20170108/ap-northeast-1/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=d1659ac016b2c5a18f4100f5ea84de103efb60afd78098b917117bdd766c5d41
+      Content-Length:
+      - '54'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Sun, 08 Jan 2017 11:41:13 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '331'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 0c2c34d0-750d-5af9-b261-643c5294d5ad
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><GetQueueUrlResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><GetQueueUrlResult><QueueUrl>https://sqs.ap-northeast-1.amazonaws.com/205480150701/movlog</QueueUrl></GetQueueUrlResult><ResponseMetadata><RequestId>0c2c34d0-750d-5af9-b261-643c5294d5ad</RequestId></ResponseMetadata></GetQueueUrlResponse>
+    http_version: 
+  recorded_at: Sun, 08 Jan 2017 11:41:12 GMT
+- request:
+    method: post
+    uri: https://sqs.ap-northeast-1.amazonaws.com/205480150701/movlog
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueAttributes&AttributeName.1=All&QueueUrl=https%3A%2F%2Fsqs.ap-northeast-1.amazonaws.com%2F205480150701%2Fmovlog&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-darwin14
+      X-Amz-Date:
+      - 20170108T114112Z
+      Host:
+      - sqs.ap-northeast-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 0447717fa8e54137bd38bc30fd3035cf3ea9b557981022e1ba54430d67bb6cc8
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI7GDT3TVT35KUTYQ/20170108/ap-northeast-1/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=0e457c556954bd674f6ba5500865bce6e7fb8f75ad6774b19def12fd4e7d3abe
+      Content-Length:
+      - '144'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Sun, 08 Jan 2017 11:41:13 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '1165'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 88509ae6-f2d7-53f9-8cd0-ca0ad54e6c8d
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><GetQueueAttributesResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><GetQueueAttributesResult><Attribute><Name>QueueArn</Name><Value>arn:aws:sqs:ap-northeast-1:205480150701:movlog</Value></Attribute><Attribute><Name>ApproximateNumberOfMessages</Name><Value>0</Value></Attribute><Attribute><Name>ApproximateNumberOfMessagesNotVisible</Name><Value>0</Value></Attribute><Attribute><Name>ApproximateNumberOfMessagesDelayed</Name><Value>0</Value></Attribute><Attribute><Name>CreatedTimestamp</Name><Value>1482495264</Value></Attribute><Attribute><Name>LastModifiedTimestamp</Name><Value>1482495264</Value></Attribute><Attribute><Name>VisibilityTimeout</Name><Value>30</Value></Attribute><Attribute><Name>MaximumMessageSize</Name><Value>262144</Value></Attribute><Attribute><Name>MessageRetentionPeriod</Name><Value>345600</Value></Attribute><Attribute><Name>DelaySeconds</Name><Value>0</Value></Attribute><Attribute><Name>ReceiveMessageWaitTimeSeconds</Name><Value>0</Value></Attribute></GetQueueAttributesResult><ResponseMetadata><RequestId>88509ae6-f2d7-53f9-8cd0-ca0ad54e6c8d</RequestId></ResponseMetadata></GetQueueAttributesResponse>
+    http_version: 
+  recorded_at: Sun, 08 Jan 2017 11:41:12 GMT
+- request:
+    method: post
+    uri: https://sqs.ap-northeast-1.amazonaws.com/205480150701/movlog
+    body:
+      encoding: UTF-8
+      string: Action=SendMessage&MessageAttribute.1.Name=shoryuken_class&MessageAttribute.1.Value.DataType=String&MessageAttribute.1.Value.StringValue=MovlogWorker&MessageBody=%7B%22url_request%22%3A%22%7B%5C%22search%5C%22%3A%5C%22The%20Hobbit%3A%20An%20Unexpected%20Journey%5C%22%7D%22%2C%22channel_id%22%3A-4510260032701247371%7D&QueueUrl=https%3A%2F%2Fsqs.ap-northeast-1.amazonaws.com%2F205480150701%2Fmovlog&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-darwin14
+      X-Amz-Date:
+      - 20170108T114112Z
+      Host:
+      - sqs.ap-northeast-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 19c28fdaf056f28a59e9778e6a71476b4194e2c696c1b1ed26b3366b4306b22f
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI7GDT3TVT35KUTYQ/20170108/ap-northeast-1/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=db30a32c004f66895d03cf538066d1ac1569f4b56d637060720102af6fd2c116
+      Content-Length:
+      - '417'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Sun, 08 Jan 2017 11:41:13 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '459'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 4609a8af-4175-5594-8ef8-f84366ec8e5a
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><SendMessageResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><SendMessageResult><MessageId>4d422534-1df3-42c5-abd9-b51bca72509b</MessageId><MD5OfMessageBody>e54197d73642efc678713d56becfcefc</MD5OfMessageBody><MD5OfMessageAttributes>3f0909c6a07499c7df62fd861eddb81c</MD5OfMessageAttributes></SendMessageResult><ResponseMetadata><RequestId>4609a8af-4175-5594-8ef8-f84366ec8e5a</RequestId></ResponseMetadata></SendMessageResponse>
+    http_version: 
+  recorded_at: Sun, 08 Jan 2017 11:41:12 GMT
+- request:
+    method: post
+    uri: https://sqs.ap-northeast-1.amazonaws.com/205480150701/movlog
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueAttributes&AttributeName.1=All&QueueUrl=https%3A%2F%2Fsqs.ap-northeast-1.amazonaws.com%2F205480150701%2Fmovlog&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-darwin14
+      X-Amz-Date:
+      - 20170108T114114Z
+      Host:
+      - sqs.ap-northeast-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 0447717fa8e54137bd38bc30fd3035cf3ea9b557981022e1ba54430d67bb6cc8
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI7GDT3TVT35KUTYQ/20170108/ap-northeast-1/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=f0a0ffe5f7284d4ea765bbbc19accf57121d2da6aaba504dead447595ee8dd49
+      Content-Length:
+      - '144'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Sun, 08 Jan 2017 11:41:15 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '1165'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 8769e329-ad08-508c-96dc-b3c58a93a943
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><GetQueueAttributesResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><GetQueueAttributesResult><Attribute><Name>QueueArn</Name><Value>arn:aws:sqs:ap-northeast-1:205480150701:movlog</Value></Attribute><Attribute><Name>ApproximateNumberOfMessages</Name><Value>4</Value></Attribute><Attribute><Name>ApproximateNumberOfMessagesNotVisible</Name><Value>0</Value></Attribute><Attribute><Name>ApproximateNumberOfMessagesDelayed</Name><Value>0</Value></Attribute><Attribute><Name>CreatedTimestamp</Name><Value>1482495264</Value></Attribute><Attribute><Name>LastModifiedTimestamp</Name><Value>1482495264</Value></Attribute><Attribute><Name>VisibilityTimeout</Name><Value>30</Value></Attribute><Attribute><Name>MaximumMessageSize</Name><Value>262144</Value></Attribute><Attribute><Name>MessageRetentionPeriod</Name><Value>345600</Value></Attribute><Attribute><Name>DelaySeconds</Name><Value>0</Value></Attribute><Attribute><Name>ReceiveMessageWaitTimeSeconds</Name><Value>0</Value></Attribute></GetQueueAttributesResult><ResponseMetadata><RequestId>8769e329-ad08-508c-96dc-b3c58a93a943</RequestId></ResponseMetadata></GetQueueAttributesResponse>
+    http_version: 
+  recorded_at: Sun, 08 Jan 2017 11:41:14 GMT
+- request:
+    method: post
+    uri: https://sqs.ap-northeast-1.amazonaws.com/205480150701/movlog
+    body:
+      encoding: UTF-8
+      string: Action=SendMessage&MessageAttribute.1.Name=shoryuken_class&MessageAttribute.1.Value.DataType=String&MessageAttribute.1.Value.StringValue=MovlogWorker&MessageBody=%7B%22url_request%22%3A%22%7B%5C%22search%5C%22%3A%5C%22The%20Hobbit%3A%20An%20Unexpected%20Journey%5C%22%7D%22%2C%22channel_id%22%3A-4510260032701247371%7D&QueueUrl=https%3A%2F%2Fsqs.ap-northeast-1.amazonaws.com%2F205480150701%2Fmovlog&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-darwin14
+      X-Amz-Date:
+      - 20170108T114114Z
+      Host:
+      - sqs.ap-northeast-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 19c28fdaf056f28a59e9778e6a71476b4194e2c696c1b1ed26b3366b4306b22f
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI7GDT3TVT35KUTYQ/20170108/ap-northeast-1/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=50698d71cf4086f9f2091ae858f4bd9eb982e6b6b362b9709f83b31a2f595609
+      Content-Length:
+      - '417'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Sun, 08 Jan 2017 11:41:15 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '459'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 6a31f68f-9605-5304-b4e5-a663b19e741c
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><SendMessageResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><SendMessageResult><MessageId>0499c77c-952d-423a-8ceb-fb2e66b88750</MessageId><MD5OfMessageBody>e54197d73642efc678713d56becfcefc</MD5OfMessageBody><MD5OfMessageAttributes>3f0909c6a07499c7df62fd861eddb81c</MD5OfMessageAttributes></SendMessageResult><ResponseMetadata><RequestId>6a31f68f-9605-5304-b4e5-a663b19e741c</RequestId></ResponseMetadata></SendMessageResponse>
+    http_version: 
+  recorded_at: Sun, 08 Jan 2017 11:41:14 GMT
 recorded_with: VCR 3.0.3

@@ -8,9 +8,7 @@ describe 'Location Routes' do
     # TODO: find a better way to populate !
     DB[:movies].delete
     DB[:locations].delete
-    post 'api/v0.1/movie',
-         { search: HAPPY_MOVIE }.to_json,
-         'CONTENT_TYPE' => 'application/json'
+    LoadMoviesFromOMDB.call(HAPPY_MOVIE)
   end
 
   after do
@@ -40,9 +38,7 @@ describe 'Location Routes' do
     after do
       DB[:movies].delete
       DB[:locations].delete
-      post 'api/v0.1/movie',
-           { search: HAPPY_MOVIE }.to_json,
-           'CONTENT_TYPE' => 'application/json'
+      LoadMoviesFromOMDB.call(HAPPY_MOVIE)
     end
 
     it '(HAPPY) should successfully update valid location' do

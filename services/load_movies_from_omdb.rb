@@ -8,7 +8,7 @@ class LoadMoviesFromOMDB
   def self.call(params, api_url: nil, channel: nil)
     sleep_until_client_starts
     request_info = {
-      request_json: params,
+      search_term: params,
       api_url: api_url,
       channel: channel
     }
@@ -24,8 +24,8 @@ class LoadMoviesFromOMDB
   register :retrieve_omdb_movies_data, lambda { |request_info|
     begin
       omdb_movies = Movlog::Movies.find(s: request_info[:search_term])
-
-      publish(request_info, '25')
+      request_info[:movies] = omdb_movies.movies
+      publish(request_info, '35')
       Right(request_info)
     rescue
       publish(request_info, 'search_term could not be resolved')
@@ -40,7 +40,6 @@ class LoadMoviesFromOMDB
         filtered_movies << movie unless Movie.find(title: movie.title)
       end
       request_info[:movies] = filtered_movies
-
       publish(request_info, '50')
       Right(request_info)
     rescue
@@ -55,7 +54,7 @@ class LoadMoviesFromOMDB
       movie
     end
 
-    publish(request_info, '75')
+    publish(request_info, '65')
     Right(request_info)
   }
 
@@ -92,9 +91,7 @@ class LoadMoviesFromOMDB
   end
 
   def self.write_movie_location(movie, location)
-    movie.add_location(
-      name: location
-    )
+    movie.add_location(name: location)
   end
 
   def self.publish(request_info, message)
@@ -111,12 +108,4 @@ class LoadMoviesFromOMDB
   def self.sleep_until_client_starts
     sleep(0.5)
   end
-
-  # def self.write_location_airports(location, airports)
-  #   airports.each do |airport|
-  #     Airport.create(name: airport.name,
-  #                    countryCode: airport.countryCode,
-  #                    lat: airport.lat, lng: airport.lng)
-  #   end
-  # end
 end

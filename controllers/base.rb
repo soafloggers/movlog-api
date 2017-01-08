@@ -20,7 +20,8 @@ class MovlogAPI < Sinatra::Base
     Econfig.root = File.expand_path('..', settings.root)
     Skyscanner::SkyscannerApi.config.update(api_key: config.SKY_API_KEY)
     Airbnb::AirbnbApi.config.update(client_id: config.AIRBNB_CLIENT_ID)
-    Geonames::GeonamesApi.config.update(username: config.GEONAMES_USERNAME)
+    Airports::GeonamesApi.config.update(username: config.GEONAMES_USERNAME)
+    Airports::GoogleMapApi.config.update(key: config.GOOGLEMAP_KEY)
   end
 
   get '/?' do

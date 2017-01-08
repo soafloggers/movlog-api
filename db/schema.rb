@@ -33,13 +33,6 @@ Sequel.migration do
       String :genre, :size=>255
     end
     
-    create_table(:rooms) do
-      primary_key :id
-      String :name, :size=>255
-      String :city, :size=>255
-      String :picture_url, :size=>255
-    end
-    
     create_table(:schema_info) do
       Integer :version, :default=>0, :null=>false
     end

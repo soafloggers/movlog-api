@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+require_relative 'movie'
 require_relative 'location'
 
 # Represents overall group information for JSON API output

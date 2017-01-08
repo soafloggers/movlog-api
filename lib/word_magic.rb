@@ -14,4 +14,13 @@ module WordMagic
   def contains_search_terms?(title, search_terms)
     search_terms.any? { |term| title&.downcase&.include?(term) }
   end
+
+  def split_search_terms(search_terms)
+    safe_search_terms = search_terms&.gsub(/, /, '+')
+    safe_search_terms&.split('+')&.select { |w| w.size > 1 }
+  end
+
+  def url_decode(search_term)
+    search_term.gsub(/\+/, ' ').gsub(/%20/, ' ')
+  end
 end

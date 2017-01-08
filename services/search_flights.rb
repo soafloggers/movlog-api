@@ -25,10 +25,10 @@ class SearchFlights
 
   register :transform_to_geocode, lambda { |data|
     begin
-      origin_info = Geonames::AirportInfo.find(data[:origin])
-      destin_info = Geonames::AirportInfo.find(data[:destination])
-      data[:destination] = "#{destin_info.lat},#{destin_info.lng}-Latlong"
-      data[:origin] = "#{origin_info.lat},#{origin_info.lng}-Latlong"
+      origin_info = Airports::AirportInfo.find(data[:origin])
+      destin_info = Airports::AirportInfo.find(data[:destination])
+      data[:origin] = sky_id(origin_info.lat, origin_info.lng)
+      data[:destination] = sky_id(destin_info.lat, destin_info.lng)
       data[:outbound] = "anytime" if data[:outbound].nil?
       Right(data)
     rescue
@@ -50,9 +50,13 @@ class SearchFlights
 
   def self.route_meta(params)
     route_meta = {
-      market: 'TW', currency: 'TWD', locale: 'zh-TW',
-      origin: 'TW', destination: params[:destination],
+      market: 'TW', currency: 'TWD', locale: 'en-US',
+      origin: params[:origin], destination: params[:destination],
       outbound: params[:outbound], inbound: 'anytime'
     }
+  end
+
+  def self.sky_id(lat, lng)
+    "#{lat},#{lng}-Latlong"
   end
 end

@@ -1518,7 +1518,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:05:16 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Ajim&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Ajim&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1556,7 +1556,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:05:16 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Chott%20el%20Djerid&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Chott%20el%20Djerid&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1595,7 +1595,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:05:17 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Bouhlel&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Bouhlel&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1634,7 +1634,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:05:18 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Elstree%20Studios&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Elstree%20Studios&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1673,7 +1673,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:05:19 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Death%20Valley%20National%20Park&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Death%20Valley%20National%20Park&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1712,7 +1712,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:05:19 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Tikal%20National%20Park&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Tikal%20National%20Park&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1751,7 +1751,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:05:20 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Driss%20Hotel&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Sidi%20Driss%20Hotel&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1790,7 +1790,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:05:21 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Yuma&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Yuma&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -1829,7 +1829,7 @@ http_interactions:
   recorded_at: Sat, 10 Dec 2016 09:05:22 GMT
 - request:
     method: get
-    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Shepperton%20Studios&username=z255477
+    uri: http://api.geonames.org/searchJSON?fuzzy=0.5&maxRows=1&q=Shepperton%20Studios&username=<GEONAMES_USERNAME>
     body:
       encoding: US-ASCII
       string: ''
@@ -8028,4 +8028,355 @@ http_interactions:
         Iik7CiAgICB9Cjwvc2NyaXB0PgoKICAgIDwvYm9keT4KPC9odG1sPgo=
     http_version: 
   recorded_at: Sun, 25 Dec 2016 22:00:33 GMT
+- request:
+    method: post
+    uri: https://sqs.ap-northeast-1.amazonaws.com/205480150701/movlog
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueAttributes&AttributeName.1=All&QueueUrl=https%3A%2F%2Fsqs.ap-northeast-1.amazonaws.com%2F205480150701%2Fmovlog&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-darwin14
+      X-Amz-Date:
+      - 20170108T114113Z
+      Host:
+      - sqs.ap-northeast-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 0447717fa8e54137bd38bc30fd3035cf3ea9b557981022e1ba54430d67bb6cc8
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI7GDT3TVT35KUTYQ/20170108/ap-northeast-1/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=71d08b1a05558f559fc0a071b2b396dc5c16a7d60ea94dfc75fd53e684fdc10a
+      Content-Length:
+      - '144'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Sun, 08 Jan 2017 11:41:14 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '1165'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - dd7d181b-a596-59db-9abc-48f7820cacaa
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><GetQueueAttributesResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><GetQueueAttributesResult><Attribute><Name>QueueArn</Name><Value>arn:aws:sqs:ap-northeast-1:205480150701:movlog</Value></Attribute><Attribute><Name>ApproximateNumberOfMessages</Name><Value>2</Value></Attribute><Attribute><Name>ApproximateNumberOfMessagesNotVisible</Name><Value>0</Value></Attribute><Attribute><Name>ApproximateNumberOfMessagesDelayed</Name><Value>0</Value></Attribute><Attribute><Name>CreatedTimestamp</Name><Value>1482495264</Value></Attribute><Attribute><Name>LastModifiedTimestamp</Name><Value>1482495264</Value></Attribute><Attribute><Name>VisibilityTimeout</Name><Value>30</Value></Attribute><Attribute><Name>MaximumMessageSize</Name><Value>262144</Value></Attribute><Attribute><Name>MessageRetentionPeriod</Name><Value>345600</Value></Attribute><Attribute><Name>DelaySeconds</Name><Value>0</Value></Attribute><Attribute><Name>ReceiveMessageWaitTimeSeconds</Name><Value>0</Value></Attribute></GetQueueAttributesResult><ResponseMetadata><RequestId>dd7d181b-a596-59db-9abc-48f7820cacaa</RequestId></ResponseMetadata></GetQueueAttributesResponse>
+    http_version: 
+  recorded_at: Sun, 08 Jan 2017 11:41:13 GMT
+- request:
+    method: post
+    uri: https://sqs.ap-northeast-1.amazonaws.com/205480150701/movlog
+    body:
+      encoding: UTF-8
+      string: Action=SendMessage&MessageAttribute.1.Name=shoryuken_class&MessageAttribute.1.Value.DataType=String&MessageAttribute.1.Value.StringValue=MovlogWorker&MessageBody=%7B%22url_request%22%3A%22%7B%5C%22search%5C%22%3A%5C%22The%20Hobbit%3A%20An%20Unexpected%20Journey%5C%22%7D%22%2C%22channel_id%22%3A-4510260032701247371%7D&QueueUrl=https%3A%2F%2Fsqs.ap-northeast-1.amazonaws.com%2F205480150701%2Fmovlog&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-darwin14
+      X-Amz-Date:
+      - 20170108T114113Z
+      Host:
+      - sqs.ap-northeast-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 19c28fdaf056f28a59e9778e6a71476b4194e2c696c1b1ed26b3366b4306b22f
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI7GDT3TVT35KUTYQ/20170108/ap-northeast-1/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=1e3b1a4b78a66f8192112fe533e7495fe58f005de30915a500cb60bb7c99d3ff
+      Content-Length:
+      - '417'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Sun, 08 Jan 2017 11:41:14 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '459'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - c47ce834-bcab-50dd-9dc8-b8d89b31d52c
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><SendMessageResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><SendMessageResult><MessageId>31489a0c-2fb4-4739-8a6b-80511de9c969</MessageId><MD5OfMessageBody>e54197d73642efc678713d56becfcefc</MD5OfMessageBody><MD5OfMessageAttributes>3f0909c6a07499c7df62fd861eddb81c</MD5OfMessageAttributes></SendMessageResult><ResponseMetadata><RequestId>c47ce834-bcab-50dd-9dc8-b8d89b31d52c</RequestId></ResponseMetadata></SendMessageResponse>
+    http_version: 
+  recorded_at: Sun, 08 Jan 2017 11:41:13 GMT
+- request:
+    method: post
+    uri: https://sqs.ap-northeast-1.amazonaws.com/205480150701/movlog
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueAttributes&AttributeName.1=All&QueueUrl=https%3A%2F%2Fsqs.ap-northeast-1.amazonaws.com%2F205480150701%2Fmovlog&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-darwin14
+      X-Amz-Date:
+      - 20170108T114113Z
+      Host:
+      - sqs.ap-northeast-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 0447717fa8e54137bd38bc30fd3035cf3ea9b557981022e1ba54430d67bb6cc8
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI7GDT3TVT35KUTYQ/20170108/ap-northeast-1/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=71d08b1a05558f559fc0a071b2b396dc5c16a7d60ea94dfc75fd53e684fdc10a
+      Content-Length:
+      - '144'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Sun, 08 Jan 2017 11:41:14 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '1165'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 7a270ee9-f738-5ef5-b943-5e05d0a25782
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><GetQueueAttributesResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><GetQueueAttributesResult><Attribute><Name>QueueArn</Name><Value>arn:aws:sqs:ap-northeast-1:205480150701:movlog</Value></Attribute><Attribute><Name>ApproximateNumberOfMessages</Name><Value>2</Value></Attribute><Attribute><Name>ApproximateNumberOfMessagesNotVisible</Name><Value>0</Value></Attribute><Attribute><Name>ApproximateNumberOfMessagesDelayed</Name><Value>0</Value></Attribute><Attribute><Name>CreatedTimestamp</Name><Value>1482495264</Value></Attribute><Attribute><Name>LastModifiedTimestamp</Name><Value>1482495264</Value></Attribute><Attribute><Name>VisibilityTimeout</Name><Value>30</Value></Attribute><Attribute><Name>MaximumMessageSize</Name><Value>262144</Value></Attribute><Attribute><Name>MessageRetentionPeriod</Name><Value>345600</Value></Attribute><Attribute><Name>DelaySeconds</Name><Value>0</Value></Attribute><Attribute><Name>ReceiveMessageWaitTimeSeconds</Name><Value>0</Value></Attribute></GetQueueAttributesResult><ResponseMetadata><RequestId>7a270ee9-f738-5ef5-b943-5e05d0a25782</RequestId></ResponseMetadata></GetQueueAttributesResponse>
+    http_version: 
+  recorded_at: Sun, 08 Jan 2017 11:41:13 GMT
+- request:
+    method: post
+    uri: https://sqs.ap-northeast-1.amazonaws.com/205480150701/movlog
+    body:
+      encoding: UTF-8
+      string: Action=SendMessage&MessageAttribute.1.Name=shoryuken_class&MessageAttribute.1.Value.DataType=String&MessageAttribute.1.Value.StringValue=MovlogWorker&MessageBody=%7B%22search_term%22%3A%22%22%2C%22channel_id%22%3A1186332748410711906%7D&QueueUrl=https%3A%2F%2Fsqs.ap-northeast-1.amazonaws.com%2F205480150701%2Fmovlog&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-darwin14
+      X-Amz-Date:
+      - 20170108T114113Z
+      Host:
+      - sqs.ap-northeast-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 2e21c2cc1d0163cc27171395f305fa5a192c33f0b411d9ffabccba5c8effb0e0
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI7GDT3TVT35KUTYQ/20170108/ap-northeast-1/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=28a7871c905f9fd9b32b835b2230c1f28d078e79a4360604150113eeb80606e9
+      Content-Length:
+      - '334'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Sun, 08 Jan 2017 11:41:14 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '459'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - aa8c276c-61b4-5509-9048-7780462e20d8
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><SendMessageResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><SendMessageResult><MessageId>3e4779ab-43c7-4a87-bc12-2e935d2b6dc0</MessageId><MD5OfMessageBody>3193e428caa8ac6bcf1b74c3afd41b18</MD5OfMessageBody><MD5OfMessageAttributes>3f0909c6a07499c7df62fd861eddb81c</MD5OfMessageAttributes></SendMessageResult><ResponseMetadata><RequestId>aa8c276c-61b4-5509-9048-7780462e20d8</RequestId></ResponseMetadata></SendMessageResponse>
+    http_version: 
+  recorded_at: Sun, 08 Jan 2017 11:41:14 GMT
+- request:
+    method: post
+    uri: https://sqs.ap-northeast-1.amazonaws.com/
+    body:
+      encoding: UTF-8
+      string: Action=GetQueueUrl&QueueName=movlog&Version=2012-11-05
+    headers:
+      Content-Type:
+      - application/x-www-form-urlencoded; charset=utf-8
+      Accept-Encoding:
+      - ''
+      User-Agent:
+      - aws-sdk-ruby2/2.6.44 ruby/2.3.1 x86_64-darwin14
+      X-Amz-Date:
+      - 20170108T114150Z
+      Host:
+      - sqs.ap-northeast-1.amazonaws.com
+      X-Amz-Content-Sha256:
+      - 8009e3b764938f41cfe1d3036b32a638b0fe7a5a078a947a5a2e94bcabfb6fd0
+      Authorization:
+      - AWS4-HMAC-SHA256 Credential=AKIAI7GDT3TVT35KUTYQ/20170108/ap-northeast-1/sqs/aws4_request,
+        SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=79244fc5718e210e8f0b8902044a353c1c5fccb888bd0b0360ab5a36c775e661
+      Content-Length:
+      - '54'
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Server
+      Date:
+      - Sun, 08 Jan 2017 11:41:51 GMT
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '331'
+      Connection:
+      - keep-alive
+      X-Amzn-Requestid:
+      - 6b8ab8c9-5a14-5528-8480-e8257dabd1d1
+    body:
+      encoding: UTF-8
+      string: <?xml version="1.0"?><GetQueueUrlResponse xmlns="http://queue.amazonaws.com/doc/2012-11-05/"><GetQueueUrlResult><QueueUrl>https://sqs.ap-northeast-1.amazonaws.com/205480150701/movlog</QueueUrl></GetQueueUrlResult><ResponseMetadata><RequestId>6b8ab8c9-5a14-5528-8480-e8257dabd1d1</RequestId></ResponseMetadata></GetQueueUrlResponse>
+    http_version: 
+  recorded_at: Sun, 08 Jan 2017 11:41:51 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?r=json&s=The%20Hobbit:%20An%20Unexpected%20Journey&type=movie
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.omdbapi.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 08 Jan 2017 11:48:55 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '690'
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=d2acf566f2d9b15e341c73afe5cbc99141483876134; expires=Mon, 08-Jan-18
+        11:48:54 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Mon, 09 Jan 2017 11:48:55 GMT
+      Last-Modified:
+      - Sun, 08 Jan 2017 11:48:52 GMT
+      Vary:
+      - "*"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 31df6c52d5174626-TPE
+    body:
+      encoding: UTF-8
+      string: '{"Search":[{"Title":"The Hobbit: An Unexpected Journey","Year":"2012","imdbID":"tt0903624","Type":"movie","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTcwNTE4MTUxMl5BMl5BanBnXkFtZTcwMDIyODM4OA@@._V1_SX300.jpg"},{"Title":"The
+        Hobbit: An Unexpected Journey - The Company of Thorin","Year":"2013","imdbID":"tt3345514","Type":"movie","Poster":"N/A"},{"Title":"The
+        Hobbit: An Unexpected Journey - Bastion of Greenwood: Rhosgobel","Year":"2013","imdbID":"tt3391296","Type":"movie","Poster":"N/A"},{"Title":"The
+        Hobbit: An Unexpected Journey - Journey Back to Middle Earth","Year":"2013","imdbID":"tt3329372","Type":"movie","Poster":"N/A"}],"totalResults":"4","Response":"True"}'
+    http_version: 
+  recorded_at: Sun, 08 Jan 2017 11:48:54 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?r=json&s=http://www.omdbapi.com?t=sadmovie%26y=%26plot=short%26r=json&type=movie
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.omdbapi.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 08 Jan 2017 11:48:57 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '47'
+      Connection:
+      - close
+      Set-Cookie:
+      - __cfduid=d98f73713b252f8036a4af46347a0d4711483876136; expires=Mon, 08-Jan-18
+        11:48:56 GMT; path=/; domain=.omdbapi.com; HttpOnly
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Mon, 09 Jan 2017 11:48:57 GMT
+      Last-Modified:
+      - Sun, 08 Jan 2017 11:48:54 GMT
+      Vary:
+      - "*"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 31df6c5fb26345ba-TPE
+    body:
+      encoding: UTF-8
+      string: '{"Response":"False","Error":"Movie not found!"}'
+    http_version: 
+  recorded_at: Sun, 08 Jan 2017 11:48:56 GMT
 recorded_with: VCR 3.0.3

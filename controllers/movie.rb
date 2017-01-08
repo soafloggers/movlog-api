@@ -3,10 +3,11 @@
 # MovlogAPI web service
 class MovlogAPI < Sinatra::Base
   get "/#{API_VER}/movie/?" do
+    params[:headers] = headers
     results = SearchMovies.call(params)
 
     if results.success?
-      MoviesSearchResultsRepresenter.new(results.value).to_json
+      results.value
     else
       ErrorRepresenter.new(results.value).to_status_response
     end

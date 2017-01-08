@@ -31,9 +31,11 @@ class MovlogWorker
   shoryuken_options queue: config.MOVLOG_QUEUE, auto_delete: true
 
   def perform(_sqs_msg, worker_request)
+    puts '------worker start to work-----------'
+    puts worker_request
     request = JSON.parse(worker_request)
     result = LoadMoviesFromOMDB.call(
-      request['url_request'],
+      request['search_term'],
       api_url: MovlogWorker.config.API_URL,
       channel: request['channel_id']
     )

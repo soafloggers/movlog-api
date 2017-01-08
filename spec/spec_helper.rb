@@ -39,6 +39,8 @@ SAD_LOCATION_ID = '0000'
 REMOVED_LOCATION_ID = '0000'
 SAD_LOCATION = 'Ajim'
 HAPPY_LOCATION = 'California'
+HAPPY_ORIGIN = 'Taiwan+Taoyuan+International+Airport'
+HAPPY_DESTINATION = 'Auckland+International+Airport'
 
 class SpecSearch
   extend WordMagic

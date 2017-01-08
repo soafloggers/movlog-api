@@ -15,6 +15,7 @@ class SearchMovies
   end
 
   register :validate_params, lambda { |params|
+    @params = params
     search_term = MoviesSearchCriteria.new(params)
     if search_term
       Right(search_term)
@@ -29,20 +30,43 @@ class SearchMovies
   }
 
   register :load_movies_from_omdb, lambda { |search_data|
-    if !search_data[:db_results].success? ||
-        search_data[:db_results].value.movies&.count.zero?
-      results = LoadMoviesFromOMDB.call(search_data[:search_term].whole_term)
-    else
-      results = search_data[:db_results]
+    if not_found_in_db(search_data[:db_results])
+      results = { omdb: send_msg_to_worker(
+        search_data[:search_term].whole_term)
+      }
+    elsif search_data[:db_results].success?
+      results = { db: search_data[:db_results].value }
     end
     Right(results)
   }
 
   register :return_search_result, lambda { |results|
-    if results.success?
-      Right(results.value)
+    if results[:db]
+      Right(MoviesSearchResultsRepresenter.new(results[:db]).to_json)
+    elsif results[:omdb]
+      Right([202, { channel_id: channel_id }.to_json])
     else
       Left(Error.new('Movie not found!'))
     end
   }
+
+  private_class_method
+
+  def self.channel_id
+    return @channel_id if @channel_id
+    @channel_id = (@params[:headers].to_s + @params[:search].to_s).hash
+  end
+
+  def self.send_msg_to_worker(term)
+    result = MovlogWorker.perform_async(
+      {
+        search_term: term,
+        channel_id: channel_id
+      }.to_json
+    )
+  end
+
+  def self.not_found_in_db(db_results)
+    !db_results.success? || db_results.value.movies&.count.zero?
+  end
 end
